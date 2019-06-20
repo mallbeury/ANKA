@@ -1,0 +1,116 @@
+/* PAGE VIEW */
+/******************************************/
+#page-view {
+  overflow: hidden;
+}
+
+/* INTRO VIEW */
+/******************************************/
+#intro-view {
+  padding: 0 16px 0 16px;
+}
+
+#intro-view h1 {
+  padding: 16px 0 46px 0;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  font-size: 3.2em;
+  line-height: 1.1em;
+}
+
+#intro-view .text {
+  padding: 10px 0 50px 0;
+  border-bottom: 2px solid #000;
+}
+
+#intro-view p {
+  font-size: 1.4em;
+  line-height: 1.2em;
+}
+
+/* ART CENTRES VIEW */
+/******************************************/
+#art-centres-view {
+  padding: 28px 16px 52px 16px;
+}
+
+#art-centres-view h1 {
+  padding: 0 0 32px 0;
+  font-size: 1.8em;
+  line-height: 1.1em;
+}
+
+#art-centres-view img {
+  margin-bottom: 4px;
+  max-width: 100%;
+}
+
+#art-centres-view ul {
+  display: flex;
+  flex-wrap: wrap;  
+  margin: 0 -10px;
+}
+
+#art-centres-view li {
+  width: 50%;
+  padding: 0 10px 22px 10px;
+}
+
+#art-centres-view li h1 {
+  padding: 4px 0;
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+#art-centres-view li h2 {
+  padding: 0;
+  color: #979BA0;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #intro-view {  
+    margin: 0 auto;
+    width: 718px;
+  }
+
+  #art-centres-view {
+    margin: 0 auto;
+    width: 718px;    
+  }
+
+  #art-centres-view li {
+    width: 33%;
+  }
+}
+
+/* Small devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+  #intro-view {  
+    width: 918px;
+  }
+
+  #art-centres-view {
+    width: 918px;    
+  }
+
+  #art-centres-view li {
+    width: 25%;
+    padding-bottom: 42px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #intro-view {  
+    width: 1142px;
+  }
+
+  #art-centres-view {
+    width: 1142px;    
+  }
+
+  #art-centres-view li {
+    width: 20%;
+  }
+}
