@@ -1,9 +1,3 @@
-/* PAGE VIEW */
-/******************************************/
-#page-view {
-  overflow: hidden;
-}
-
 /* HERO VIEW */
 /******************************************/
 #hero-view {
@@ -371,11 +365,6 @@
     padding-right: 30px;
   }
 
-  #browse-view .browse-container-view {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   #map-view .title {
     padding-top: 94px;
   }
@@ -590,6 +579,7 @@
   #message-view {
     padding-left: 30px;
     padding-right: 30px;
+    width: auto;
   }
 
   #browse-view .browse-container-view {
@@ -628,10 +618,6 @@
 
   #what-we-do-view ul li {
     width: 33%;
-  }
-
-  #featured-projects-view .featured-projects-view-container {  
-    width: 1142px;
   }
 
   #featured-projects-view .image {  

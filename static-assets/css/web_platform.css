@@ -508,8 +508,22 @@ footer .credit-view {
   background: #000;
 }
 
+.image .credit.under  {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  color: #979BA0;
+  background: initial;
+}
+
 .image img {
   width: 100%;
+}
+
+/* PAGE VIEW */
+/******************************************/
+#page-view {
+  overflow: hidden;
 }
 
 .standard-view {
@@ -620,6 +634,10 @@ footer .credit-view {
     padding-top: 72px;
   }
 
+  .image .credit.under  {
+    width: 50%;
+  }
+
   .standard-view {
     padding-left: 30px;
     padding-right: 30px;
@@ -640,5 +658,6 @@ footer .credit-view {
     padding-left: 0;
     padding-right: 0;
     margin: 0 auto;
+    width: 1142px;
   }
 }

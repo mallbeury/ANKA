@@ -1,0 +1,146 @@
+/* INTRO VIEW */
+/******************************************/
+#intro-view {
+}
+
+#intro-view h1 {
+  padding: 16px 0 46px 0;
+  border-top: 2px solid #000;
+  font-size: 3.2em;
+  line-height: 1.1em;
+}
+
+#intro-view .text {
+  padding: 10px 0 50px 0;
+  border-bottom: 2px solid #000;
+}
+
+#intro-view p {
+  font-size: 1.4em;
+  line-height: 1.2em;
+}
+
+/* ABOUT VIEW */
+/******************************************/
+#about-view {
+  margin-top: 46px;
+  margin-bottom: 46px;
+}
+
+#about-view h1 {
+  padding: 8px 0 14px 0;
+  font-size: 1.6em;
+  border-top: 2px solid #000;
+}
+
+#about-view p {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+#about-view .quote {      
+  margin: 54px 0 20px 15%;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  color: #F26A61;
+}
+
+#about-view .quote:before {
+  margin-left: -14px;
+  content: "“";
+}
+
+#about-view .quote:after {
+  content: "”";
+}
+
+#about-view .quote-credit {
+  margin: 0 0 0 15%;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  color: #F26A61;
+}
+
+/* IMAGE VIEW */
+/******************************************/
+#image-view {
+}
+
+/* DOWNLOADS VIEW */
+/******************************************/
+#downloads-view {
+  padding-top: 48px;
+  padding-bottom: 78px;
+}
+
+#downloads-view h1 {
+  padding: 10px 0 20px 0;
+  border-top: 2px solid #000;
+  font-size: 1.6em;
+  line-height: 1.1em;
+}
+
+#downloads-view ul {
+  border-bottom: 2px solid #000;
+}
+
+#downloads-view ul li {
+  padding: 12px 0;
+  border-top: 2px solid #000;
+}
+
+#downloads-view li .details {
+  display: inline-block;
+  width: 90%;
+}
+
+#downloads-view li .download {
+  font-size: 1.1em;
+}
+
+#downloads-view li .size {
+  padding-left: 4px;
+  font-size: 0.8em;
+}
+
+#downloads-view li .icon {
+  display: inline-block;
+  width: 10%;
+  text-align: right;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #about-view h1 {
+    font-size: 1.8em;
+  }
+
+  #about-view p {
+    font-size: 2em;
+  }
+
+  #about-view .quote {      
+    margin-left: 40%; 
+    font-size: 2em;
+  }
+
+  #about-view .quote-credit {
+    margin-left: 40%; 
+  }
+
+  #image-view .image {
+    margin-right: 33%;
+  }
+
+  #downloads-view ul {
+    margin-left: 60%;
+  }
+}
+
+/* Small devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

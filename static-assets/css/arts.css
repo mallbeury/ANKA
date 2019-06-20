@@ -1,9 +1,3 @@
-/* PAGE VIEW */
-/******************************************/
-#page-view {
-  overflow: hidden;
-}
-
 /* INTRO VIEW */
 /******************************************/
 #intro-view {
@@ -84,14 +78,6 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  #intro-view {  
-    width: 1142px;
-  }
-
-  #art-centres-view {
-    width: 1142px;    
-  }
-
   #art-centres-view li {
     width: 20%;
   }

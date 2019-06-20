@@ -46,8 +46,11 @@ define([
       $('.big-menu-view .mainmenu').removeClass('open');
     }
 
-    var mapView = new MapView({ el: '#map-view' });
-    mapView.render();
+    // do we have a map?
+    if ($('#map-view').length) {
+      var mapView = new MapView({ el: '#map-view' });
+      mapView.render();
+    }
 
     $(window).resize(function() {
       handleResize();
