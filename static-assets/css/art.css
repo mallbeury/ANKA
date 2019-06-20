@@ -107,11 +107,8 @@
   #intro-view,
   #about-view,
   #journal-view {  
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-    width: 718px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   #journal-view h1 {
@@ -121,12 +118,6 @@
 
 /* Small devices (tablets, 992px and up) */
 @media (min-width: 992px) {
-  #intro-view,
-  #about-view,
-  #journal-view {  
-    width: 918px;
-  }
-
   #about-view .tables {
     margin: 0 -10px;
     display: flex;
@@ -145,6 +136,10 @@
   #intro-view,
   #about-view,
   #journal-view {  
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;    
     width: 1142px;
   }
 }

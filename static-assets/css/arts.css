@@ -70,13 +70,13 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #intro-view {  
-    margin: 0 auto;
-    width: 718px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   #art-centres-view {
-    margin: 0 auto;
-    width: 718px;    
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   #art-centres-view li {
@@ -86,14 +86,6 @@
 
 /* Small devices (tablets, 992px and up) */
 @media (min-width: 992px) {
-  #intro-view {  
-    width: 918px;
-  }
-
-  #art-centres-view {
-    width: 918px;    
-  }
-
   #art-centres-view li {
     width: 25%;
     padding-bottom: 42px;
@@ -103,10 +95,16 @@
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   #intro-view {  
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
     width: 1142px;
   }
 
   #art-centres-view {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
     width: 1142px;    
   }
 
