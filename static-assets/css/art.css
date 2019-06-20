@@ -7,7 +7,6 @@
 /* INTRO VIEW */
 /******************************************/
 #intro-view {
-  padding: 0 16px 0 16px;
 }
 
 #intro-view h1 {
@@ -31,7 +30,6 @@
 /******************************************/
 #about-view {
   margin-top: 46px;
-  padding: 0 16px 0 16px;
 }
 
 #about-view h1 {
@@ -80,7 +78,7 @@
 /* JOURNAL VIEW */
 /******************************************/
 #journal-view {
-  padding: 74px 16px 0 16px;  
+  padding-top: 74px;
 }
 
 #journal-view h1 {
@@ -107,8 +105,6 @@
   #intro-view,
   #about-view,
   #journal-view {  
-    padding-left: 30px;
-    padding-right: 30px;
   }
 
   #journal-view h1 {
@@ -136,10 +132,6 @@
   #intro-view,
   #about-view,
   #journal-view {  
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;    
     width: 1142px;
   }
 }

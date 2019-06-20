@@ -341,7 +341,7 @@ form input {
 /******************************************/
 footer {
   width: 100%;
-  padding: 44px 16px 60px 16px;
+  padding: 44px 0 60px 0;
   text-align: left;
   color: #FFF;
   background: #F26A61;
@@ -512,6 +512,11 @@ footer .credit-view {
   width: 100%;
 }
 
+.standard-view {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #menu-view {
@@ -544,11 +549,6 @@ footer .credit-view {
 
   #map-view #mini-map {
     display: block;
-  }
-
-  footer {
-    padding-left: 30px;
-    padding-right: 30px;
   }
 
   footer .top {
@@ -619,6 +619,11 @@ footer .credit-view {
   footer .support-view {
     padding-top: 72px;
   }
+
+  .standard-view {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 /* Small devices (tablets, 992px and up) */
@@ -628,9 +633,12 @@ footer .credit-view {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   footer .footer-container {
+    width: 1142px;
+  }
+
+  .standard-view {
     padding-left: 0;
     padding-right: 0;
     margin: 0 auto;
-    width: 1142px;
   }
 }

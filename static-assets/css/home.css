@@ -35,7 +35,8 @@
 /* MESSAGE VIEW */
 /******************************************/
 #message-view {
-  padding: 34px 16px 96px 16px;
+  padding-top: 34px;
+  padding-bottom: 96px;
   font-size: 1.8em;
   line-height: 1.2em;
   color: #FFF;
@@ -46,7 +47,8 @@
 /******************************************/
 #browse-view {
   display: none;
-  padding: 38px 16px 48px 16px;
+  padding-top: 38px;
+  padding-bottom: 48px;
 }
 
 #browse-view .browse-container-view {
@@ -72,7 +74,7 @@
 }
 
 #browse-view .nav-view {
-  padding: 0 0 16px 0;
+  padding: 0 16px 16px 0;
   text-align: right;
 }
 
@@ -102,7 +104,8 @@
 /* WHO WE ARE VIEW */
 /******************************************/
 #who-we-are-view {
-  padding: 62px 16px 70px 16px;
+  padding-top: 62px;
+  padding-bottom: 70px;
   background: #eaecec;
 }
 
@@ -202,7 +205,8 @@
 /* FEATURED PROJECTS VIEW */
 /******************************************/
 #featured-projects-view {
-  padding: 62px 16px 70px 16px;
+  padding-top: 62px;
+  padding-bottom: 70px;
   background: #fff;
 }
 
@@ -255,7 +259,8 @@
 /* KEEP UP VIEW */
 /******************************************/
 #keep-up-view {
-  padding: 68px 16px 76px 16px;  
+  padding-top: 68px;
+  padding-bottom: 76px;  
   background: #eaecec;
 }
 
@@ -300,7 +305,8 @@
 /* HELP US VIEW */
 /******************************************/
 #help-us-view {
-  padding: 68px 16px 76px 16px;  
+  padding-top: 68px;
+  padding-bottom: 76px;
   background: #fff;
 }
 
@@ -349,13 +355,12 @@
   }
 
   #message-view {
-    padding-left: 30px;
-    padding-right: 30px;
     font-size: 3em;
   }
 
   #browse-view {
-    padding: 92px 0 92px 0;
+    padding-top: 92px;
+    padding-bottom: 92px;
   }
 
   #browse-view h1, h2 {
@@ -376,12 +381,8 @@
   }
 
   #who-we-are-view {  
-    padding: 98px 0 98px 0;
-  }
-
-  #who-we-are-view .who-we-are-view-container {  
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 98px;
+    padding-bottom: 98px;
   }
 
   #who-we-are-view .text {  
@@ -427,12 +428,8 @@
   }
 
   #featured-projects-view {  
-    padding: 98px 0 98px 0;
-  }
-
-  #featured-projects-view .featured-projects-view-container {  
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 98px;
+    padding-bottom: 98px;
   }
 
   #featured-projects-view .title {
@@ -456,7 +453,8 @@
   }
 
   #keep-up-view {  
-    padding: 98px 0 98px 0;
+    padding-top: 98px;
+    padding-bottom: 98px;
   }
 
   #keep-up-view h1 {
@@ -486,7 +484,8 @@
   }
 
   #help-us-view {  
-    padding: 98px 0 98px 0;
+    padding-top: 98px;
+    padding-bottom: 98px;
   }
 
   #help-us-view h1 {
@@ -588,14 +587,16 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  #message-view {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   #browse-view .browse-container-view {
     width: 988px;
   }
 
   #who-we-are-view .who-we-are-view-container {  
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0 auto;
     width: 988px;
   }
 
@@ -630,9 +631,6 @@
   }
 
   #featured-projects-view .featured-projects-view-container {  
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0 auto;
     width: 1142px;
   }
 
@@ -649,19 +647,18 @@
   }
 
   #keep-up-view .keep-up-view-container {  
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0 auto;
     width: 988px;
   }
 
   #keep-up-view .image {  
+    width: 40%;
     padding: 0;
   }
 
   #keep-up-view .text {  
+    width: 60%;
     padding-top: 70px;
-    padding-left: 120px;
+    padding-left: 114px;
   }
 
   #keep-up-view form .field {
@@ -674,9 +671,6 @@
   }
 
   #help-us-view .help-us-view-container {  
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0 auto;
     width: 988px;
   }
 
