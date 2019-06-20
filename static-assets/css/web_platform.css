@@ -547,20 +547,20 @@ footer .credit-view {
   }
 
   footer .footer-container {
-    margin: 0 auto;
-    width: 718px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   footer .top {
     display: inline-block;
-    width: 100px;
+    width: 20%;
     text-align: right;
     vertical-align: top;
   }
 
   footer .about-tagline {
     display: inline-block;
-    width: 184px;
+    width: 25%;
     vertical-align: top;
   }
 
@@ -575,7 +575,7 @@ footer .credit-view {
 
   footer .subscribe-donation {
     display: inline-block;
-    width: 434px;
+    width: 55%;
   }
 
   footer .subscribe {
@@ -587,7 +587,7 @@ footer .credit-view {
   }
 
   footer .subscribe form input {
-    width: 246px;
+    width: 51%;
   }
 
   footer .subscribe form .btn {
@@ -596,13 +596,13 @@ footer .credit-view {
 
   footer .contact-view {
     display: inline-block;
-    width: 184px;
+    width: 25%;
     vertical-align: top;
   }
 
   footer .menu-social {
     display: inline-block;
-    width: 248px;
+    width: 30%;
     padding-top: 72px;
   }
 
@@ -612,7 +612,7 @@ footer .credit-view {
 
   footer .support-acknowledge {
     display: inline-block;
-    width: 286px;
+    width: 45%;
     vertical-align: top;
   }
 
@@ -623,34 +623,14 @@ footer .credit-view {
 
 /* Small devices (tablets, 992px and up) */
 @media (min-width: 992px) {
-  footer .footer-container {
-    width: 918px;
-  }
-
-  footer .top {
-    width: 300px;
-  }
-
-  footer .support-acknowledge {
-    width: 486px;
-  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   footer .footer-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
     width: 1142px;
-  }
-
-  footer .about-tagline {
-    width: 190px;
-  }  
-
-  footer .top {
-    width: 518px;
-  }
-
-  footer .contact-view {
-    width: 190px;
   }
 }
