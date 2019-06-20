@@ -1,0 +1,725 @@
+/* PAGE VIEW */
+/******************************************/
+#page-view {
+  overflow: hidden;
+}
+
+/* HERO VIEW */
+/******************************************/
+#hero-view {
+  display: none;
+  position: relative;
+  background: #000;
+  min-height: 500px;
+}
+
+#hero-view .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 104px 16px 0 16px;
+}
+
+#hero-view .title h1 {
+  color: #FFF;
+  font-size: 3.4em;
+  line-height: 1.1em;
+}
+
+#hero-view .nav-down {
+  position: absolute;
+  left: 16px;
+  bottom: 30px;
+}
+
+/* MESSAGE VIEW */
+/******************************************/
+#message-view {
+  padding: 34px 16px 96px 16px;
+  font-size: 1.8em;
+  line-height: 1.2em;
+  color: #FFF;
+  background: #F26A61;
+}
+
+/* BROWSE VIEW */
+/******************************************/
+#browse-view {
+  display: none;
+  padding: 38px 16px 48px 16px;
+}
+
+#browse-view .browse-container-view {
+  position: relative;
+}
+
+#browse-view .browse-container-view .title {
+  position: absolute;
+  top: -36px;
+}
+
+#browse-view h1 {
+  padding: 4px 0;
+}
+
+#browse-view h2 {
+  padding: 0;
+  color: #979BA0;
+}
+
+#browse-view .slick-container-view {
+  margin: 0 -10px;  
+}
+
+#browse-view .nav-view {
+  padding: 0 0 16px 0;
+  text-align: right;
+}
+
+#browse-view .nav-view .nav-right {
+  padding-left: 12px;
+}
+
+#browse-view .nav-view span:hover {
+  cursor: pointer;
+}
+
+#browse-view .slick-slide {
+  margin: 0 10px;
+}
+
+#browse-view img {
+  margin-bottom: 4px;
+  max-width: 100%;
+}
+
+/* MAP VIEW */
+/******************************************/
+#map-view .title {
+  padding-top: 64px;
+}
+
+/* WHO WE ARE VIEW */
+/******************************************/
+#who-we-are-view {
+  padding: 62px 16px 70px 16px;
+  background: #eaecec;
+}
+
+#who-we-are-view .text {
+  vertical-align: top;
+}
+
+#who-we-are-view .image {
+  position: relative;
+  vertical-align: top;
+  padding: 42px 0 0 0;
+}
+
+#who-we-are-view .image img {
+  width: 100%;
+}
+
+#who-we-are-view .nav {
+  padding-top: 20px;
+}
+
+#who-we-are-view h1 {
+  padding: 0 0 32px 0;
+  font-size: 3em;
+  line-height: 1.1em;
+}
+
+#who-we-are-view p {
+  font-size: 1.4em;
+  line-height: 1.2em;
+}
+
+/* WHAT WE DO VIEW */
+/******************************************/
+#what-we-do-view {
+  padding: 62px 16px 70px 16px;
+  background: #fff;
+}
+
+#what-we-do-view .text {
+  vertical-align: top;
+}
+
+#what-we-do-view .image {
+  position: relative;
+  vertical-align: top;
+  padding: 42px 0 0 0;
+}
+
+#what-we-do-view .image img {
+  width: 100%;
+}
+
+#what-we-do-view .nav {
+  padding-top: 20px;
+}
+
+#what-we-do-view h1 {
+  padding: 0 0 32px 0;
+  font-size: 5.2em;
+  line-height: 1.1em;
+}
+
+#what-we-do-view p {
+  font-size: 1.4em;
+  line-height: 1.2em;
+}
+
+#what-we-do-view ul {
+  margin: 0 -12px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#what-we-do-view ul li {
+  width: 50%;
+  font-size: 1em;
+}
+
+#what-we-do-view ul li .content {
+  margin: 0 12px;
+  padding: 8px 0 22px 0;
+  border-top: 1px solid #979BA0;
+}
+
+#what-we-do-view ul li h1 {
+  padding: 0 0 10px 0;
+  font-size: 1.25em;
+}
+
+/* IMAGE VIEW */
+/******************************************/
+.image-view img {
+  width: 100%;
+}
+
+/* FEATURED PROJECTS VIEW */
+/******************************************/
+#featured-projects-view {
+  padding: 62px 16px 70px 16px;
+  background: #fff;
+}
+
+#featured-projects-view .title {
+  padding-bottom: 34px;
+}
+
+#featured-projects-view .title h1 {
+  font-size: 3em;
+}
+
+#featured-projects-view .text {
+  vertical-align: top;
+}
+
+#featured-projects-view .image {
+  position: relative;
+  vertical-align: top;
+  padding: 42px 0 0 0;
+}
+
+#featured-projects-view .image img {
+  width: 100%;
+}
+
+#featured-projects-view .nav {
+  padding-top: 20px;
+}
+
+#featured-projects-view h1 {
+  padding: 0 0 32px 0;
+  font-size: 2.6em;
+  line-height: 1.1em;
+}
+
+#featured-projects-view p {
+  font-size: 1.2em;
+  line-height: 1.3em;
+}
+
+#featured-projects-view .projects {
+  border-bottom: 1px solid #000;
+}
+
+#featured-projects-view .project {
+  padding: 28px 0 28px 0;
+  border-top: 1px solid #000;
+}
+
+/* KEEP UP VIEW */
+/******************************************/
+#keep-up-view {
+  padding: 68px 16px 76px 16px;  
+  background: #eaecec;
+}
+
+#keep-up-view .text {
+  padding: 0 44px 0 0;
+  vertical-align: top;
+}
+
+#keep-up-view .image {
+  position: relative;
+  vertical-align: top;
+  padding: 76px 0 0 0;
+}
+
+#keep-up-view .image img {
+  width: 100%;
+}
+
+#keep-up-view .nav {
+  padding: 20px 0 20px 0;
+}
+
+#keep-up-view h1 {
+  padding: 0 0 44px 0;
+  font-size: 5.2em;
+  line-height: 1.1em;
+}
+
+#keep-up-view p {
+  font-size: 1.4em;
+  line-height: 1.2em;
+}
+
+#keep-up-view form {
+  padding-top: 30px;
+}
+
+#keep-up-view form .btn {
+  margin-top: 14px;
+}
+
+/* HELP US VIEW */
+/******************************************/
+#help-us-view {
+  padding: 68px 16px 76px 16px;  
+  background: #fff;
+}
+
+#help-us-view .text {
+  vertical-align: top;
+}
+
+#help-us-view .image {
+  position: relative;
+  vertical-align: top;
+  padding: 42px 0 0 0;
+}
+
+#help-us-view .image img {
+  width: 100%;
+}
+
+#help-us-view h1 {
+  padding: 0 0 44px 0;
+  font-size: 5.2em;
+  line-height: 1.1em;
+}
+
+#help-us-view p {
+  font-size: 1.4em;
+  line-height: 1.2em;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #hero-view {
+    min-height: 642px;
+  }
+
+  #hero-view .title {
+    padding: 160px 30px 0 30px;
+  }
+
+  #hero-view .title h1 {
+    font-size: 6.4em;
+    line-height: 1em;
+  }
+
+  #hero-view .nav-down {
+    left: 30px;
+  }
+
+  #message-view {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 3em;
+  }
+
+  #browse-view {
+    padding: 92px 0 92px 0;
+  }
+
+  #browse-view h1, h2 {
+    font-size: 1.1em;
+  }
+
+  #browse-view .nav-view {
+    padding-right: 30px;
+  }
+
+  #browse-view .browse-container-view {
+    margin: 0 auto;
+    width: 718px;
+  }
+
+  #map-view .title {
+    padding-top: 94px;
+  }
+
+  #who-we-are-view {  
+    padding: 98px 0 98px 0;
+  }
+
+  #who-we-are-view .who-we-are-view-container {  
+    margin: 0 auto;
+    width: 718px;
+  }
+
+  #who-we-are-view .text {  
+    padding-right: 46px;
+    display: inline-block;
+    width: 426px;
+  }
+
+  #who-we-are-view .image {  
+    padding: 42px 0 0 0;
+    display: inline-block;
+    width: 292px;
+  }
+
+  #what-we-do-view h1 {
+    font-size: 5.2em;
+    line-height: 1em;
+  }
+
+  #what-we-do-view {  
+    padding: 98px 0 98px 0;
+  }
+
+  #what-we-do-view .what-we-do-view-container {  
+    margin: 0 auto;
+    width: 718px;
+  }
+
+  #what-we-do-view .image {  
+    padding: 72px 0 0 0;
+    display: inline-block;
+    width: 292px;
+  }
+
+  #what-we-do-view .text {  
+    padding-left: 46px;
+    display: inline-block;
+    width: 426px;
+  }
+
+  #what-we-do-view ul li {
+    width: 50%;
+  }
+
+  #featured-projects-view {  
+    padding: 98px 0 98px 0;
+  }
+
+  #featured-projects-view .featured-projects-view-container {  
+    margin: 0 auto;
+    width: 718px;
+  }
+
+  #featured-projects-view .title {
+    padding-bottom: 0;
+  }
+
+  #featured-projects-view .image {  
+    padding: 20px 0 0 0;
+    display: inline-block;
+    width: 352px;
+  }
+
+  #featured-projects-view .text {  
+    padding: 0 0 0 68px;
+    display: inline-block;
+    width: 366px;
+  }
+
+  #featured-projects-view .project:nth-child(even) .text {
+    padding: 0 68px 0 0;
+  }
+
+  #keep-up-view {  
+    padding: 98px 0 98px 0;
+  }
+
+  #keep-up-view h1 {
+    font-size: 5.2em;
+    line-height: 1em;
+  }
+
+  #keep-up-view .keep-up-view-container {  
+    margin: 0 auto;
+    width: 600px;
+  }
+
+  #keep-up-view .image {  
+    padding: 50px 0 0 0;
+    display: inline-block;
+    width: 292px;
+  }
+
+  #keep-up-view .text {  
+    padding: 0 0 0 46px;
+    display: inline-block;
+    width: 308px;
+  }
+
+  #keep-up-view form .field {
+    width: 244px;
+  }
+
+  #help-us-view {  
+    padding: 98px 0 98px 0;
+  }
+
+  #help-us-view h1 {
+    font-size: 5.2em;    
+    line-height: 1em;
+  }
+
+  #help-us-view .help-us-view-container {  
+    margin: 0 auto;
+    width: 600px;
+  }
+
+  #help-us-view .image {  
+    padding: 0;
+    display: inline-block;
+    width: 292px;
+  }
+
+  #help-us-view .text {  
+    padding: 68px 46px 0 0;
+    display: inline-block;
+    width: 308px;
+  }
+
+  #browse-view .browse-container-view .title {
+    font-size: 1.4em;
+  }
+
+  #browse-view .slick-container-view {
+    width: 150%;  
+  }
+}
+
+/* Small devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+  #hero-view .title h1 {
+    font-size: 6.4em;
+  }
+
+  #message-view {
+    padding-top: 28px;
+    padding-bottom: 168px;
+    font-size: 3em;
+  }
+
+  #message-view .title {
+    width: 644px;
+  }
+
+  #browse-view .browse-container-view {
+    width: 774px;
+  }
+
+  #who-we-are-view .who-we-are-view-container {  
+    width: 774px;
+  }
+
+  #who-we-are-view .text {  
+    padding-top: 30px;
+    padding-right: 104px;
+    width: 394px;
+  }
+
+  #who-we-are-view .image {  
+    padding: 0;
+    width: 380px;
+  }
+
+  #what-we-do-view .what-we-do-view-container {  
+    width: 774px;
+  }
+
+  #what-we-do-view .image {  
+    padding-top: 24px;
+    width: 380px;
+  }
+
+  #what-we-do-view .text {  
+    padding-left: 104px;
+    width: 394px;
+  }
+
+  #what-we-do-view ul li {
+    width: 50%;
+  }
+
+  #featured-projects-view .featured-projects-view-container {  
+    width: 918px;
+  }
+
+  #featured-projects-view .image {  
+    width: 460px;
+  }
+
+  #featured-projects-view .text {  
+    padding: 0 0 0 104px;
+    width: 458px;
+  }
+
+  #featured-projects-view .project:nth-child(even) .text {
+    padding: 0 104px 0 0;
+  }
+
+  #keep-up-view .keep-up-view-container {  
+    width: 774px;
+  }
+
+  #keep-up-view .image {  
+    padding: 0;
+    width: 380px;
+  }
+
+  #keep-up-view .text {  
+    padding-left: 92px;
+    width: 394px;
+  }
+
+  #keep-up-view form .field {
+    display: block;
+  }
+
+  #keep-up-view form .btn {
+    margin-top: 14px;
+  }
+
+  #help-us-view .help-us-view-container {  
+    width: 774px;
+  }
+
+  #help-us-view .image {  
+    padding: 0;
+    width: 380px;
+  }
+
+  #help-us-view .text {  
+    padding: 90px 144px 0 0;
+    width: 394px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #browse-view .browse-container-view {
+    width: 988px;
+  }
+
+  #who-we-are-view .who-we-are-view-container {  
+    width: 988px;
+  }
+
+  #who-we-are-view .text {  
+    padding-top: 50px;
+    padding-right: 114px;
+    width: 524px;
+  }
+
+  #who-we-are-view .image {  
+    padding: 0;
+    width: 464px;
+  }
+
+  #what-we-do-view .what-we-do-view-container {  
+    width: 988px;
+  }
+
+  #what-we-do-view .image {  
+    padding-top: 0;
+    width: 464px;
+  }
+
+  #what-we-do-view .text {  
+    padding-top: 50px;
+    padding-left: 104px;
+    width: 524px;
+  }
+
+  #what-we-do-view ul li {
+    width: 33%;
+  }
+
+  #featured-projects-view .featured-projects-view-container {  
+    width: 1142px;
+  }
+
+  #featured-projects-view .image {  
+    padding-top: 0;
+    width: 560px;
+  }
+
+  #featured-projects-view .text {  
+    padding: 70px 0 0 84px;
+    width: 582px;
+  }
+
+  #featured-projects-view .project:nth-child(even) .text {
+    padding: 70px 84px 0 0;
+  }
+
+  #keep-up-view .keep-up-view-container {  
+    width: 988px;
+  }
+
+  #keep-up-view .image {  
+    padding: 0;
+    width: 464px;
+  }
+
+  #keep-up-view .text {  
+    padding-top: 70px;
+    padding-left: 120px;
+    width: 524px;
+  }
+
+  #keep-up-view form .field {
+    display: inline-block;
+  }
+
+  #keep-up-view form .btn {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  #help-us-view .help-us-view-container {  
+    width: 988px;
+  }
+
+  #help-us-view .image {  
+    padding: 0;
+    width: 464px;
+  }
+
+  #help-us-view .text {  
+    padding: 112px 184px 0 0;
+    width: 524px;
+  }
+}
