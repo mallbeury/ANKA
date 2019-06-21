@@ -520,6 +520,10 @@
     font-size: 3em;
   }
 
+  #message-view .standard-view {
+    width: 55%;
+  }
+
   #who-we-are-view .text {  
     padding-top: 30px;
     padding-right: 104px;
@@ -576,10 +580,9 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  #message-view {
-    padding-left: 30px;
-    padding-right: 30px;
-    width: auto;
+  #message-view .standard-view {
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   #browse-view .browse-container-view {

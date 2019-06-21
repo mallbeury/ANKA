@@ -6,9 +6,10 @@ define([
   'bootstrap',
   'modernizr',
   'visible',
+  'macy',
   'imageScale',
   'views/MapView'
-], function(_, Backbone, bootstrap, modernizr, visible, imageScale, MapView){
+], function(_, Backbone, bootstrap, modernizr, visible, Macy, imageScale, MapView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {
@@ -32,6 +33,17 @@ define([
       }
     }
 
+    function checkInView() {
+      var bVisible = false;
+      $('#journal-view .journal-post').each(function(index){
+        bVisible = $(this).visible(true);
+        if (bVisible) {
+          $(this).css('opacity', 1);
+          $('.post-container', $(this)).css('top', 0);
+        }
+      });
+    }
+    
     function closeSmallMenuSubmenu() {
       $('.small-menu-view .mainmenu').removeClass('open');
       $('body').removeClass('lock');
@@ -44,6 +56,27 @@ define([
     function closeBigMenuSubmenu() {
       changeBigMenuSubmenu();
       $('.big-menu-view .mainmenu').removeClass('open');
+    }
+
+    // do we want macy?
+    if ($('#macy-container').length) {
+      var masonry = new Macy({
+          container: '#macy-container',
+          columns: 1,
+          waitForImages: true,
+          mobileFirst: true,
+          breakAt: {
+            768: 2
+          },
+      });
+
+      masonry.on(masonry.constants.EVENT_IMAGE_COMPLETE, function (ctx) {
+        checkInView();
+
+        $(window).scroll(function() {
+          checkInView();
+        });
+      });
     }
 
     // do we have a map?

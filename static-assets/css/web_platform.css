@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'helvetica';
+  color: #000;
   font-size: 12.5px;
   line-height: 1.3em;  
 }
@@ -20,6 +21,9 @@ h1, h2 {
 ul, ol {
   margin: 0;
   padding: 0;
+}
+
+ul {
   list-style: none;
 }
 
@@ -337,6 +341,49 @@ form input {
   height: 154px;
 }
 
+/* DOWNLOADS VIEW */
+/******************************************/
+#downloads-view {
+  padding-top: 48px;
+  padding-bottom: 78px;
+}
+
+#downloads-view h1 {
+  padding: 10px 0 20px 0;
+  border-top: 2px solid #000;
+  font-size: 1.6em;
+  line-height: 1.1em;
+}
+
+#downloads-view ul {
+  border-bottom: 2px solid #000;
+}
+
+#downloads-view ul li {
+  padding: 12px 0;
+  border-top: 2px solid #000;
+}
+
+#downloads-view li .details {
+  display: inline-block;
+  width: 90%;
+}
+
+#downloads-view li .download {
+  font-size: 1.1em;
+}
+
+#downloads-view li .size {
+  padding-left: 4px;
+  font-size: 0.8em;
+}
+
+#downloads-view li .icon {
+  display: inline-block;
+  width: 10%;
+  text-align: right;
+}
+
 /* FOOTER */
 /******************************************/
 footer {
@@ -527,8 +574,12 @@ footer .credit-view {
 }
 
 .standard-view {
+/*  
   padding-left: 16px;
   padding-right: 16px;
+*/  
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -563,6 +614,18 @@ footer .credit-view {
 
   #map-view #mini-map {
     display: block;
+  }
+
+  #downloads-view ul {
+    margin-left: 60%;
+  }
+
+  #downloads-view li .download {
+    font-size: 1.4em;
+  }
+
+  #downloads-view li .size {
+    font-size: 1.1em;
   }
 
   footer .top {
@@ -639,13 +702,30 @@ footer .credit-view {
   }
 
   .standard-view {
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-left: 30px;
+    margin-right: 30px; 
   }
 }
 
 /* Small devices (tablets, 992px and up) */
 @media (min-width: 992px) {
+  .limit-width h1,
+  .limit-width p {
+    width: 65%;
+  }
+
+  .limit-width ul,
+  .limit-width ol {
+    width: 50%;
+  }
+
+  .push-right h1,
+  .push-right p,
+  .push-right ul,
+  .push-right ol {
+    margin-left: 50%;
+    width: auto;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -655,8 +735,10 @@ footer .credit-view {
   }
 
   .standard-view {
+/*    
     padding-left: 0;
     padding-right: 0;
+*/    
     margin: 0 auto;
     width: 1142px;
   }

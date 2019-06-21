@@ -1,11 +1,11 @@
 /* INTRO VIEW */
 /******************************************/
 #intro-view {
+  border-top: 2px solid #000;
 }
 
 #intro-view h1 {
   padding: 16px 0 46px 0;
-  border-top: 2px solid #000;
   font-size: 3.2em;
   line-height: 1.1em;
 }
@@ -96,6 +96,11 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  #intro-view h1 {
+    font-size: 7.2em;  
+    line-height: 1em;
+  }
+
   #journal-view h1 {
     font-size: 1.7em;
   }

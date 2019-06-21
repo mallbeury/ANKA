@@ -33,37 +33,43 @@
   font-size: 1.6em;
 }
 
-#about-view p {
+#about-view p,
+#about-view ul,
+#about-view ol {
   font-size: 1.2em;
   line-height: 1.2em;
 }
 
-#about-view .quote {      
-  margin: 54px 0 20px 15%;
-  font-size: 1.4em;
-  line-height: 1.2em;
+#about-view ol {
+  padding-left: 16px; 
+}
+
+#about-view .vision {
+  font-size: 1.8em;
   color: #F26A61;
 }
 
-#about-view .quote:before {
-  margin-left: -14px;
-  content: "“";
+#about-view ul {
 }
 
-#about-view .quote:after {
-  content: "”";
+#about-view ul li {
+  padding-left: 19px;
 }
 
-#about-view .quote-credit {
-  margin: 0 0 0 15%;
-  font-size: 1.2em;
-  line-height: 1.2em;
-  color: #F26A61;
+#about-view ul li:before {
+  margin-left: -19px;
+  content: "— ";
 }
 
 /* IMAGE VIEW */
 /******************************************/
 #image-view {
+}
+
+/* JOURNAL VIEW */
+/******************************************/
+#journal-view {
+  padding-top: 52px;
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -77,26 +83,44 @@
     font-size: 1.8em;
   }
 
-  #about-view p {
-    font-size: 2em;
+  #about-view p,
+  #about-view ul,
+  #about-view ol {
+    font-size: 1.8em;
   }
 
-  #about-view .quote {      
-    margin-left: 40%; 
-    font-size: 2em;
+  #about-view ul li {
+    padding-left: 29px;
   }
 
-  #about-view .quote-credit {
-    margin-left: 40%; 
+  #about-view ul li:before {
+    margin-left: -29px;
   }
 
-  #image-view .image {
-    margin-right: 33%;
+  #about-view .vision {
+    font-size: 3.7em;
   }
+
+  #about-view .footnote {
+    font-size: 1.4em;
+    line-height: 1.2em;
+    color: #979BA0;
+  }
+
+  #about-view ol {
+    padding-left: 19px; 
+  }
+
+  #journal-view {
+    padding-top: 144px;
+  }  
 }
 
 /* Small devices (tablets, 992px and up) */
 @media (min-width: 992px) {
+  #image-view .image.limit {
+    width: 90%;
+  }  
 }
 
 /* Extra large devices (large desktops, 1200px and up) */

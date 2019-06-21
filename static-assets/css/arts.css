@@ -1,19 +1,19 @@
 /* INTRO VIEW */
 /******************************************/
 #intro-view {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 #intro-view h1 {
   padding: 16px 0 46px 0;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
   font-size: 3.2em;
   line-height: 1.1em;
 }
 
 #intro-view .text {
   padding: 10px 0 50px 0;
-  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
 }
 
 #intro-view p {
@@ -74,11 +74,12 @@
     width: 25%;
     padding-bottom: 42px;
   }
-}
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
   #art-centres-view li {
     width: 20%;
   }
 }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+ }
