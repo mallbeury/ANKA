@@ -13,7 +13,7 @@ define([
       mapboxgl.accessToken = 'pk.eyJ1Ijoicm9kZW8tY29tLWNvIiwiYSI6ImNqdWFmc2w1bzAyN3U0NnBxMzB0dmx5OGgifQ.GmOZFYxeayiNRuDMrh5i7g';
       this.mainMap = null;
       this.miniMap = null;
-      this.arrMakers = [];
+      this.markersAdded = false;
     },
 
     filter(strFilter){
@@ -21,64 +21,84 @@ define([
 
       var self = this;
 
-      var geojson = {};
-      if(this.arrMakers.length) {
-        for (var nMarker=0; nMarker < this.arrMakers.length-1; nMarker++) {
-          // remove from map
-          this.arrMakers[nMarker].remove();
-        }
-
-        while (this.arrMakers.length) {
-          this.arrMakers.pop();
-        }        
+      if (self.markersAdded) {
+        self.mainMap.removeLayer('circles1');
+        self.mainMap.removeSource('markers');
+        self.markersAdded = false;
       }
+
+      self.markersAdded = true;
 
       if (strFilter == 'all') {
         geojson = {
-          type: 'FeatureCollection',
-          features: [{
-            type: 'Feature',
-            geometry: {
-              type: 'Point',
-              coordinates: [131.364486, -16.147204]
+          "type": "geojson",
+          "data": {
+            "type": "FeatureCollection",          
+            features: [{
+              type: 'Feature',
+              geometry: {
+                type: 'Point',
+                coordinates: [131.364486, -16.147204]
+              },
+              "properties": {
+                "modelId": 1,
+              }              
             },
-          },
-          {
-            type: 'Feature',
-            geometry: {
-              type: 'Point',
-              coordinates: [132.893832, -14.248600]
-            }
-          }]
+            {
+              type: 'Feature',
+              geometry: {
+                type: 'Point',
+                coordinates: [132.893832, -14.248600]
+              },
+              "properties": {
+                "modelId": 1,
+              }              
+            }]
+          }
         };
       }
       else {
         geojson = {
-          type: 'FeatureCollection',
-          features: [{
-            type: 'Feature',
-            geometry: {
-              type: 'Point',
-              coordinates: [132.893832, -14.248600]
-            }
-          }]
+          "type": "geojson",
+          "data": {
+            "type": "FeatureCollection",
+            features: [{
+              type: 'Feature',
+              geometry: {
+                type: 'Point',
+                coordinates: [132.893832, -14.248600]
+              },
+              "properties": {
+                "modelId": 1,
+              }              
+            }]
+          }
         };
       }
 
-      // add markers to map
-      var marker = null;
-      geojson.features.forEach(function(marker) {
-        // create a HTML element for each feature
-        var el = document.createElement('div');
-        el.className = 'marker';
+      self.mainMap.addSource('markers', geojson);
 
-        // make a marker for each feature and add to the map
-        marker = new mapboxgl.Marker(el)
-          .setLngLat(marker.geometry.coordinates)
-          .addTo(self.mainMap);
-
-        self.arrMakers.push(marker);
-      });     
+      self.mainMap.addLayer({
+        "id": "circles1",
+        "source": "markers",
+        "type": "circle",
+        "paint": {
+          'circle-radius': [
+            'interpolate',
+            ['linear'],
+            ['zoom'],
+            2, 2,
+            5, 5,
+            10, 10,
+            15, 15,
+            20, 20
+          ],      
+          "circle-color": "#007cbf",
+          "circle-opacity": 1,
+          "circle-stroke-width": 0,
+        },
+        "filter": ["==", "modelId", 1],
+      });
     },
 
     buildMainMap(){
@@ -113,6 +133,11 @@ define([
 
       this.buildMainMap();
       this.buildMiniMap();
+
+      this.mainMap.on('load', function () {
+        console.log('ready');
+        app.dispatcher.trigger("MapView:ready");          
+      });
 
       return this;
     }

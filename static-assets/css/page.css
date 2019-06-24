@@ -23,6 +23,7 @@
 
 #intro-view .text {
   padding: 10px 0 50px 0;
+  border-top: 2px solid #000;
   border-bottom: 2px solid #000;
 }
 
@@ -196,9 +197,17 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  #intro-view .text {
+    padding-top: 32px;
+  }
+
   #intro-view h1 {
     font-size: 7.2em;  
     line-height: 1em;
+  }
+
+  #intro-view p {
+    font-size: 1.8em;
   }
 
   #about-view h1 {
@@ -207,9 +216,12 @@
 
   #about-view p,
   #about-view ul,
-  #about-view ol,
-  #about-view td {
+  #about-view ol {
     font-size: 1.8em;
+  }
+
+  #about-view td {
+    font-size: 1.4em;
   }
 
   #about-view ul li {

@@ -2,16 +2,27 @@
 class ArtCentrePage extends Page {
 
   private static $db = array(
+    'TitleTextFormatted' => 'Text',
+    'MainImageCredit' => 'Text', 
   );
 
   private static $has_many = array(
   );
 
   private static $has_one = array(
+    'MainImage' => 'Image'
   );
 
   function getCMSFields() {
     $fields = parent::getCMSFields();
+
+    $fields->addFieldToTab('Root.Main', new TextareaField('TitleTextFormatted', 'Formatted Title'), 'Content');
+
+    $uploadField1 = new UploadField($name = 'MainImage', $title = 'Main Image');
+    $uploadField1->setCanUpload(false);
+    $fields->addFieldToTab('Root.Main', $uploadField1, 'Content');
+
+    $fields->addFieldToTab('Root.Main', new TextField('MainImageCredit', 'Main Image Credit'), 'Content');  
 
     return $fields;
   }

@@ -85,6 +85,8 @@ define([
 
     // do we have a map?
     if ($('#map-view').length) {
+      app.dispatcher.on("MapView:ready", onMapReady);
+
       var mapView = new MapView({ el: '#map-view' });
       mapView.render();
     }
@@ -140,9 +142,11 @@ define([
       }
     });
 
-    // initial view
-    mapView.filter('all');
-    artCentresView.render('all');
+    function onMapReady() {
+      // initial view
+      mapView.filter('all');
+      artCentresView.render('all');
+    }
   };
 
   return { 
