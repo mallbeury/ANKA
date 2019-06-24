@@ -21,61 +21,95 @@
   line-height: 1.2em;
 }
 
-/* ART CENTRES VIEW */
+/* ART CENTRES NAV VIEW */
 /******************************************/
-#art-centres-view {
+#art-centres-nav-view {
+  height: 44px;
+  line-height: 44px;
+  background: #E4E6E9;
+}
+
+#art-centres-nav-view .title {
+  display: inline-block;
+}
+
+#art-centres-nav-view .filters {
+  float: right;
+}
+
+#art-centres-nav-view .filters li {
+  display: inline-block;
+  padding: 0 14px;
+}
+
+#art-centres-nav-view .filters li:last-child {
+  padding-right: 0;
+}
+
+/* ART CENTRES INDEX VIEW */
+/******************************************/
+#art-centre-index-view {
+  min-height: 400px;
   padding-top: 28px;
   padding-bottom: 52px;
 }
 
-#art-centres-view h1 {
+#art-centre-index-view h1 {
   padding: 0 0 32px 0;
   font-size: 1.8em;
   line-height: 1.1em;
 }
 
-#art-centres-view img {
+#art-centre-index-view img {
   margin-bottom: 4px;
   max-width: 100%;
 }
 
-#art-centres-view ul {
+#art-centre-index-view ul {
   display: flex;
   flex-wrap: wrap;  
   margin: 0 -10px;
 }
 
-#art-centres-view li {
+#art-centre-index-view li {
   width: 50%;
   padding: 0 10px 22px 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
 }
 
-#art-centres-view li h1 {
+#art-centre-index-view .ready li {
+  opacity: 1;
+}
+
+#art-centre-index-view li h1 {
   padding: 4px 0;
   font-size: 1em;
   line-height: 1.3em;
 }
 
-#art-centres-view li h2 {
+#art-centre-index-view li h2 {
   padding: 0;
   color: #979BA0;
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #art-centres-view li {
-    width: 33%;
+  #art-centre-index-view li {
+    width: 33.3333333%;
   }
 }
 
 /* Small devices (tablets, 992px and up) */
 @media (min-width: 992px) {
-  #art-centres-view li {
+  #art-centre-index-view li {
     width: 25%;
     padding-bottom: 42px;
   }
 
-  #art-centres-view li {
+  #art-centre-index-view li {
     width: 20%;
   }
 }

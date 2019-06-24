@@ -20,6 +20,7 @@ define([
 
   var initialize = function() {
     var bFirstResize = true;
+    var mapView = null;
 
     function getBootstrapDeviceSize() {
       return $('#users-device-size').find('div:visible').first().attr('id');
@@ -127,6 +128,13 @@ define([
       $('html, body').animate({
         scrollTop: 0
       }, 1000);      
+    });
+
+    $('#art-centre-index-view ul').addClass('ready');
+    $('#art-centres-nav-view .filters li').click(function(evt){
+      if (mapView) {
+        mapView.filter($(this).attr('data-filter'));
+      }
     });
   };
 

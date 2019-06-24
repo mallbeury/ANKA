@@ -70,6 +70,11 @@
 #browse-view .nav-view {
   padding: 0 16px 16px 0;
   text-align: right;
+  color: #979BA0;
+}
+
+#browse-view .nav-view .nav-left {
+  padding-left: 20px;
 }
 
 #browse-view .nav-view .nav-right {
@@ -365,6 +370,10 @@
     padding-right: 30px;
   }
 
+  #browse-view .nav-view .nav-left {
+    padding-left: 128px;
+  }
+
   #map-view .title {
     padding-top: 94px;
   }
@@ -503,6 +512,10 @@
     font-size: 1.4em;
   }
 
+  #browse-view  .nav-view {
+    font-size: 1.4em;
+  }
+
   #browse-view .slick-container-view {
     width: 150%;  
   }
@@ -589,6 +602,10 @@
     width: 988px;
   }
 
+  #browse-view .slick-container-view {
+    width: 200%;  
+  }
+
   #who-we-are-view .who-we-are-view-container {  
     width: 988px;
   }
@@ -596,7 +613,6 @@
   #who-we-are-view .text {  
     padding-top: 50px;
     padding-right: 114px;
-    width: 524px;
   }
 
   #who-we-are-view .image {  

@@ -6,10 +6,11 @@ define([
   'bootstrap',
   'modernizr',
   'visible',
-  'slick',
+  'macy',
   'imageScale',
-  'views/MapView'
-], function(_, Backbone, bootstrap, modernizr, visible, slick, imageScale, MapView){
+  'views/MapView',
+  'views/ArtCentresView'
+], function(_, Backbone, bootstrap, modernizr, visible, Macy, imageScale, MapView, ArtCentresView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {
@@ -20,6 +21,7 @@ define([
 
   var initialize = function() {
     var bFirstResize = true;
+    var mapView = null;
 
     function getBootstrapDeviceSize() {
       return $('#users-device-size').find('div:visible').first().attr('id');
@@ -31,15 +33,19 @@ define([
       if (getBootstrapDeviceSize() != 'xs') {
         closeSmallMenuSubmenu();
       }
-
-      if (bFirstResize) {
-        bFirstResize = false;
-
-        $('#hero-view').show();
-        $('#hero-view').css('height', nWindowHeight - $('#menu-view').height());
-      }
     }
 
+    function checkInView() {
+      var bVisible = false;
+      $('#journal-view .journal-post').each(function(index){
+        bVisible = $(this).visible(true);
+        if (bVisible) {
+          $(this).css('opacity', 1);
+          $('.post-container', $(this)).css('top', 0);
+        }
+      });
+    }
+    
     function closeSmallMenuSubmenu() {
       $('.small-menu-view .mainmenu').removeClass('open');
       $('body').removeClass('lock');
@@ -54,36 +60,34 @@ define([
       $('.big-menu-view .mainmenu').removeClass('open');
     }
 
-    var mapView = new MapView({ el: '#map-view' });
-    mapView.render();
+    // do we want macy?
+    if ($('#macy-container').length) {
+      var masonry = new Macy({
+          container: '#macy-container',
+          columns: 1,
+          waitForImages: true,
+          mobileFirst: true,
+          breakAt: {
+            768: 2
+          },
+      });
 
-    $('#browse-view').show();
-    $('.slick-view').slick({
-      dots: false,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      prevArrow: $('.nav-left'),
-      nextArrow: $('.nav-right'),
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }    
-      ]
-    });
+      masonry.on(masonry.constants.EVENT_IMAGE_COMPLETE, function (ctx) {
+        checkInView();
+
+        $(window).scroll(function() {
+          checkInView();
+        });
+      });
+    }
+    
+    var artCentresView = new ArtCentresView({ el: '#art-centres-view' });
+
+    // do we have a map?
+    if ($('#map-view').length) {
+      var mapView = new MapView({ el: '#map-view' });
+      mapView.render();
+    }
 
     $(window).resize(function() {
       handleResize();
@@ -128,6 +132,17 @@ define([
         scrollTop: 0
       }, 1000);      
     });
+
+    $('#art-centres-nav-view .filters li').click(function(evt){
+      if (mapView) {
+        mapView.filter($(this).attr('data-filter'));
+        artCentresView.render($(this).attr('data-filter'));
+      }
+    });
+
+    // initial view
+    mapView.filter('all');
+    artCentresView.render('all');
   };
 
   return { 

@@ -5,11 +5,9 @@ define([
   'backbone',
   'bootstrap',
   'modernizr',
-  'visible',
-  'slick',
   'imageScale',
-  'views/MapView'
-], function(_, Backbone, bootstrap, modernizr, visible, slick, imageScale, MapView){
+  'views/SocialFeedView'
+], function(_, Backbone, bootstrap, modernizr, imageScale, SocialFeedView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {
@@ -31,15 +29,8 @@ define([
       if (getBootstrapDeviceSize() != 'xs') {
         closeSmallMenuSubmenu();
       }
-
-      if (bFirstResize) {
-        bFirstResize = false;
-
-        $('#hero-view').show();
-        $('#hero-view').css('height', nWindowHeight - $('#menu-view').height());
-      }
     }
-
+    
     function closeSmallMenuSubmenu() {
       $('.small-menu-view .mainmenu').removeClass('open');
       $('body').removeClass('lock');
@@ -53,37 +44,6 @@ define([
       changeBigMenuSubmenu();
       $('.big-menu-view .mainmenu').removeClass('open');
     }
-
-    var mapView = new MapView({ el: '#map-view' });
-    mapView.render();
-
-    $('#browse-view').show();
-    $('.slick-view').slick({
-      dots: false,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      prevArrow: $('.nav-left'),
-      nextArrow: $('.nav-right'),
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }    
-      ]
-    });
 
     $(window).resize(function() {
       handleResize();
@@ -128,6 +88,15 @@ define([
         scrollTop: 0
       }, 1000);      
     });
+
+    app.dispatcher.on("SocialFeatureView:feedready", onSocialFeedReady);
+
+    var socialFeedView = new SocialFeedView({ el: '#journal-view' });
+    socialFeedView.loadFeed();
+
+    function onSocialFeedReady() {
+      socialFeedView.render();
+    }
   };
 
   return { 

@@ -1,5 +1,21 @@
+body {
+  background: #f6cec3;
+}
+
+#menu-view {
+  background: #f6cec3;
+}
+
+#journal-view {
+  min-height: 800px;
+  padding-top: 36px;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  #journal-view {
+    padding-top: 36px;
+  }
 }
 
 /* Small devices (tablets, 992px and up) */

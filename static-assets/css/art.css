@@ -29,7 +29,6 @@
 #about-view h1 {
   padding: 8px 0 14px 0;
   font-size: 1.6em;
-  border-top: 2px solid #000;
 }
 
 #about-view p {
@@ -52,6 +51,11 @@
   padding: 8px 0 12px 0;
   font-size: 1.6em;
   font-weight: normal;
+}
+
+#about-view tr {
+  display: table-row;
+  margin: initial;
 }
 
 #about-view td {
