@@ -21,23 +21,15 @@ define([
       });    
     },
 
-    render: function(strFilter){
+    render: function(jsonResults){
       var self = this;
 
       $(this.el).html('');
       $(this.el).removeClass('ready');
 
-      var jsonData = [ { item: 1 } ];
+      $(self.el).html(self.template({data: jsonResults}));
 
-      if (strFilter == 'all') {
-        jsonData = [ { item: 1 }, { item: 2 } ];
-      }
-
-      setTimeout(function() {
-        $(self.el).html(self.template({items: jsonData}));
-
-        self.showImages();
-      }, 500);
+      self.showImages();
 
       return this;
     }

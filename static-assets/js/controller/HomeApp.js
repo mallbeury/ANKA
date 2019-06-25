@@ -54,6 +54,8 @@ define([
       $('.big-menu-view .mainmenu').removeClass('open');
     }
 
+    app.dispatcher.on("MapView:ready", onMapReady);
+
     var mapView = new MapView({ el: '#map-view' });
     mapView.render();
 
@@ -128,6 +130,31 @@ define([
         scrollTop: 0
       }, 1000);      
     });
+
+    function filterArt(strFilter) {
+      var strURL = 'content/filter/' + strFilter;      
+//      console.log(strURL);
+      $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: strURL,
+        error: function(data) {
+//          console.log('error:'+data.responseText);      
+//          console.log(data);      
+        },
+        success: function(data) {      
+//          console.log('success');
+//          console.log(data);
+
+          mapView.filter(data);
+        }
+      });
+    }
+
+    function onMapReady() {
+      filterArt('all');
+    }
+
   };
 
   return { 

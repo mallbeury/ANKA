@@ -137,15 +137,33 @@ define([
 
     $('#art-centres-nav-view .filters li').click(function(evt){
       if (mapView) {
-        mapView.filter($(this).attr('data-filter'));
-        artCentresView.render($(this).attr('data-filter'));
+        filterArt($(this).attr('data-filter'));
       }
     });
 
+    function filterArt(strFilter) {
+      var strURL = 'content/filter/' + strFilter;      
+//      console.log(strURL);
+      $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: strURL,
+        error: function(data) {
+//          console.log('error:'+data.responseText);      
+//          console.log(data);      
+        },
+        success: function(data) {      
+//          console.log('success');
+//          console.log(data);
+
+          mapView.filter(data);
+          artCentresView.render(data);
+        }
+      });
+    }
+
     function onMapReady() {
-      // initial view
-      mapView.filter('all');
-      artCentresView.render('all');
+      filterArt('all');
     }
   };
 

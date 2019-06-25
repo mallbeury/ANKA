@@ -1,6 +1,6 @@
 <?php
-class ArtCentresPage extends Page {
-  static $allowed_children = array("ArtCentresRegionPage");
+class ArtCentresRegionPage extends Page {
+  static $allowed_children = array("ArtCentrePage");
 
   private static $db = array(
   );
@@ -21,7 +21,7 @@ class ArtCentresPage extends Page {
   }
 
 }
-class ArtCentresPage_Controller extends Page_Controller {
+class ArtCentresRegionPage_Controller extends Page_Controller {
   private static $allowed_actions = array (
   );
 

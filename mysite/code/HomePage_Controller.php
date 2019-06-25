@@ -13,6 +13,9 @@ class HomePage extends Page {
   function getCMSFields() {
     $fields = parent::getCMSFields();
 
+    // remove fields
+    $fields->removeFieldFromTab('Root.Main', 'Content');
+
     return $fields;
   }
 

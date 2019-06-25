@@ -16,7 +16,7 @@ define([
       this.markersAdded = false;
     },
 
-    filter(strFilter){
+    filter(jsonResults){
       if (!this.mainMap) return;
 
       var self = this;
@@ -29,52 +29,27 @@ define([
 
       self.markersAdded = true;
 
-      if (strFilter == 'all') {
-        geojson = {
-          "type": "geojson",
-          "data": {
-            "type": "FeatureCollection",          
-            features: [{
-              type: 'Feature',
-              geometry: {
-                type: 'Point',
-                coordinates: [131.364486, -16.147204]
-              },
-              "properties": {
-                "modelId": 1,
-              }              
-            },
-            {
-              type: 'Feature',
-              geometry: {
-                type: 'Point',
-                coordinates: [132.893832, -14.248600]
-              },
-              "properties": {
-                "modelId": 1,
-              }              
-            }]
-          }
+      geojson = {
+        "type": "geojson",
+        "data": {
+          "type": "FeatureCollection",          
+          features: []
+        }
+      };
+
+      $.each(jsonResults.results, function(index, item){
+        var jsonFeature = {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [item.location.lat, item.location.lng]
+          },
+          "properties": {
+            "modelId": 1,
+          }              
         };
-      }
-      else {
-        geojson = {
-          "type": "geojson",
-          "data": {
-            "type": "FeatureCollection",
-            features: [{
-              type: 'Feature',
-              geometry: {
-                type: 'Point',
-                coordinates: [132.893832, -14.248600]
-              },
-              "properties": {
-                "modelId": 1,
-              }              
-            }]
-          }
-        };
-      }
+        geojson.data.features.push(jsonFeature);
+      });
 
       self.mainMap.addSource('markers', geojson);
 
@@ -135,7 +110,6 @@ define([
       this.buildMiniMap();
 
       this.mainMap.on('load', function () {
-        console.log('ready');
         app.dispatcher.trigger("MapView:ready");          
       });
 

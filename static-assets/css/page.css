@@ -13,6 +13,7 @@
 /******************************************/
 #intro-view {
   border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 #intro-view h1 {
@@ -37,7 +38,6 @@
 #about-view {
   margin-top: 46px;
   margin-bottom: 46px;
-  border-top: 2px solid #000;
 }
 
 #about-view h1 {
@@ -87,6 +87,29 @@
 #about-view td {
   padding: 8px 12px 18px 12px;
   width: 50%;
+}
+
+#about-view .quote {      
+  margin: 54px 0 20px 15%;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  color: #F26A61;
+}
+
+#about-view .quote:before {
+  margin-left: -11px;
+  content: "“ ";
+}
+
+#about-view .quote:after {
+  content: "”";
+}
+
+#about-view .quote-credit {
+  margin: 0 0 0 15%;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  color: #F26A61;
 }
 
 /* IMAGE VIEW */
@@ -242,6 +265,15 @@
     color: #979BA0;
   }
 
+  #about-view .quote {      
+    margin-left: 40%; 
+    font-size: 2em;
+  }
+
+  #about-view .quote-credit {
+    margin-left: 40%; 
+  }
+
   #about-view ol {
     padding-left: 19px; 
   }
@@ -282,6 +314,14 @@
 
   #downloads-view li .size {
     font-size: 1.1em;
+  }
+
+  #image-view .image.right-margin {
+    margin-right: 33%;
+  }
+
+  #image-view .image.right-margin-small {
+    margin-right: 10%;
   }
 
   .image .credit.under  {

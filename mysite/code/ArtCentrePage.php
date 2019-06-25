@@ -4,6 +4,8 @@ class ArtCentrePage extends Page {
   private static $db = array(
     'TitleTextFormatted' => 'Text',
     'MainImageCredit' => 'Text', 
+    'LocationLat' => 'Text',
+    'LocationLng' => 'Text'
   );
 
   private static $has_many = array(
@@ -23,6 +25,9 @@ class ArtCentrePage extends Page {
     $fields->addFieldToTab('Root.Main', $uploadField1, 'Content');
 
     $fields->addFieldToTab('Root.Main', new TextField('MainImageCredit', 'Main Image Credit'), 'Content');  
+
+    $fields->addFieldToTab('Root.Location', new TextField('LocationLat', 'Latitude'));  
+    $fields->addFieldToTab('Root.Location', new TextField('LocationLng', 'Longitude'));  
 
     return $fields;
   }
