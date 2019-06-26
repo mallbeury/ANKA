@@ -57,6 +57,7 @@
 /******************************************/
 #journal-view {
   padding-top: 74px;
+  border-bottom: 2px solid #000;
 }
 
 #journal-view h1 {

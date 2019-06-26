@@ -1,5 +1,5 @@
 <?php
-class GovernancePage extends Page {
+class FeedPage extends Page {
 
   private static $db = array(
   );
@@ -13,11 +13,14 @@ class GovernancePage extends Page {
   function getCMSFields() {
     $fields = parent::getCMSFields();
 
+    // remove fields
+    $fields->removeFieldFromTab('Root.Main', 'Content');
+
     return $fields;
   }
 
 }
-class GovernancePage_Controller extends Page_Controller {
+class FeedPage_Controller extends Page_Controller {
   private static $allowed_actions = array (
   );
 

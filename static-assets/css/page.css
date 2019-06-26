@@ -127,7 +127,7 @@
 /******************************************/
 #browse-view {
   display: none;
-  padding-top: 38px;
+  padding-top: 14px;
   padding-bottom: 48px;
 }
 
@@ -342,7 +342,7 @@
   }
 
   #browse-view {
-    padding-top: 92px;
+    padding-top: 44px;
     padding-bottom: 92px;
   }
 

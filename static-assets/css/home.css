@@ -47,6 +47,11 @@
   padding-top: 64px;
 }
 
+#browse-view {
+  padding-top: 38px;
+  padding-bottom: 48px;
+}
+
 /* WHO WE ARE VIEW */
 /******************************************/
 #who-we-are-view {
@@ -306,6 +311,11 @@
 
   #map-view .title {
     padding-top: 94px;
+  }
+
+  #browse-view {
+    padding-top: 92px;
+    padding-bottom: 92px;
   }
 
   #who-we-are-view {  

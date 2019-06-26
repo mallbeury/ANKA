@@ -32,6 +32,10 @@
   text-decoration: none;
 }
 
+.journal-detail-view .journal-post .content {
+  padding-top: 8px;
+}
+
 .journal-detail-view .journal-post .image-container {
   position: relative;
 }
@@ -60,6 +64,7 @@
   }
 
   .journal-detail-view .journal-post .content {
+    padding-top: 16px;
     padding-right: 22px;
   }
 }

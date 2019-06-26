@@ -6,10 +6,10 @@ define([
   'bootstrap',
   'modernizr',
   'visible',
-  'slick',
   'imageScale',
-  'views/MapView'
-], function(_, Backbone, bootstrap, modernizr, visible, slick, imageScale, MapView){
+  'views/MapView',
+  'views/BrowseSlickView'
+], function(_, Backbone, bootstrap, modernizr, visible, imageScale, MapView, BrowseSlickView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {
@@ -60,32 +60,7 @@ define([
     mapView.render();
 
     $('#browse-view').show();
-    $('.slick-view').slick({
-      dots: false,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      prevArrow: $('.nav-left'),
-      nextArrow: $('.nav-right'),
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        }    
-      ]
-    });
+    var browseSlickView = new BrowseSlickView({ el: '#browse-slick-view' });
 
     $(window).resize(function() {
       handleResize();
@@ -147,6 +122,7 @@ define([
 //          console.log(data);
 
           mapView.filter(data);
+          browseSlickView.render(data);
         }
       });
     }

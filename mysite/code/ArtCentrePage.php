@@ -5,7 +5,18 @@ class ArtCentrePage extends Page {
     'TitleTextFormatted' => 'Text',
     'MainImageCredit' => 'Text', 
     'LocationLat' => 'Text',
-    'LocationLng' => 'Text'
+    'LocationLng' => 'Text',
+    'ContactWebsite' => 'Varchar',
+    'ContactAddress' => 'Text',
+    'ContactPhone' => 'Varchar',
+    'ContactEmail' => 'Varchar',
+    'ContactSocial' => 'Text',
+    'ContactHours' => 'Text',
+    'ContactManager' => 'Varchar',
+    'InfoRegion' => 'Varchar',
+    'InfoLanguages' => 'Varchar',
+    'InfoFounded' => 'Varchar',
+    'InfoMediums' => 'Varchar'
   );
 
   private static $has_many = array(
@@ -29,6 +40,21 @@ class ArtCentrePage extends Page {
 
     $fields->addFieldToTab('Root.Location', new TextField('LocationLat', 'Latitude'));  
     $fields->addFieldToTab('Root.Location', new TextField('LocationLng', 'Longitude'));  
+
+    // contact
+    $fields->addFieldToTab('Root.Contact', new TextField('ContactWebsite', 'Website'));  
+    $fields->addFieldToTab('Root.Contact', new TextareaField('ContactAddress', 'Address'));
+    $fields->addFieldToTab('Root.Contact', new TextField('ContactPhone', 'Phone'));  
+    $fields->addFieldToTab('Root.Contact', new TextField('ContactEmail', 'Email'));  
+    $fields->addFieldToTab('Root.Contact', new TextareaField('ContactSocial', 'Social'));
+    $fields->addFieldToTab('Root.Contact', new TextareaField('ContactHours', 'Hours'));
+    $fields->addFieldToTab('Root.Contact', new TextField('ContactManager', 'Manager'));  
+
+    // info
+    $fields->addFieldToTab('Root.Information', new TextField('InfoRegion', 'Region'));  
+    $fields->addFieldToTab('Root.Information', new TextField('InfoLanguages', 'Languages'));  
+    $fields->addFieldToTab('Root.Information', new TextField('InfoFounded', 'Founded'));  
+    $fields->addFieldToTab('Root.Information', new TextField('InfoMediums', 'Mediums'));  
 
     // images
     $config = GridFieldConfig_RelationEditor::create();

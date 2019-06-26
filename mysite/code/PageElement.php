@@ -49,9 +49,6 @@ class PageElement extends DataObject {
   
     $fields = new FieldList (
       new TextField('Name', 'Name'), 
-      new LiteralField ('literalfield', '<strong>Image Element</strong>'), 
-      $uploadField,
-      $imageSizeField,
       new LiteralField ('literalfield', '<strong>Text Element</strong>'),
       new HtmlEditorField('Content', 'Content'),
       new LiteralField ('literalfield', '<strong>Quote Element</strong>'),
@@ -59,7 +56,11 @@ class PageElement extends DataObject {
       new TextField('QuoteCredit', 'Credit'),
       new LiteralField ('literalfield', '<strong>Feature Element</strong>'),
       new TextField('FeatureTitle', 'Title'),
-      new TextareaField('Feature', 'Text'));
+      new TextareaField('Feature', 'Text'),
+      new LiteralField ('literalfield', '<strong>Image Element</strong>'), 
+      $uploadField,
+      $imageSizeField
+    );
 
     return $fields; 
  }  

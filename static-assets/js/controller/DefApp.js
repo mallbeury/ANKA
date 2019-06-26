@@ -92,7 +92,6 @@ define([
     // do we have a browse?
     if ($('#browse-view').length) {
       $('#browse-view').show();
-
       var browseSlickView = new BrowseSlickView({ el: '#browse-slick-view' });
     }
 

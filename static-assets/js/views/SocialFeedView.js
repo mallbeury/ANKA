@@ -27,7 +27,7 @@ define([
     loadFeed: function(){
       var self = this;
 
-      var url = 'https://www.juicer.io/api/feeds/playmountainrush?per=100';
+      var url = 'https://www.juicer.io/api/feeds/playmountainrush?per=20';
 //      console.log(url);
       $.getJSON(url, function(result){
         if(!result || !result.posts){
