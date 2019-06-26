@@ -30,6 +30,7 @@ class PartnersPage extends Page {
     $uploadField1 = new UploadField($name = 'PartnerImage', $title = 'Image');
     $uploadField1->setCanUpload(false);
     $fields->addFieldToTab('Root.Main', $uploadField1);
+    $fields->addFieldToTab('Root.Main', new TextField('PartnerImageCredit', 'Credit'));  
 
     // art
     $fields->addFieldToTab('Root.Main', new LiteralField ('literalfield', '<strong>Art Bodies</strong>')); 
@@ -38,12 +39,11 @@ class PartnersPage extends Page {
     $uploadField2 = new UploadField($name = 'ArtImage', $title = 'Image');
     $uploadField2->setCanUpload(false);
     $fields->addFieldToTab('Root.Main', $uploadField2);
-    $fields->addFieldToTab('Root.Main', new TextField('PartnerImageCredit', 'Credit'));  
+    $fields->addFieldToTab('Root.Main', new TextField('ArtImageCredit', 'Credit'));  
       
     // industry
     $fields->addFieldToTab('Root.Main', new LiteralField ('literalfield', '<strong>Industry Partners</strong>')); 
     $fields->addFieldToTab('Root.Main', new HtmlEditorField('IndustryText', 'Text')); 
-    $fields->addFieldToTab('Root.Main', new TextField('ArtImageCredit', 'Credit'));  
 
     return $fields;
   }
