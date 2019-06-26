@@ -8,8 +8,9 @@ define([
   'visible',
   'macy',
   'imageScale',
-  'views/MapView'
-], function(_, Backbone, bootstrap, modernizr, visible, Macy, imageScale, MapView){
+  'views/MapView',
+  'views/BrowseSlickView'
+], function(_, Backbone, bootstrap, modernizr, visible, Macy, imageScale, MapView, BrowseSlickView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {
@@ -82,8 +83,17 @@ define([
 
     // do we have a map?
     if ($('#map-view').length) {
+      app.dispatcher.on("MapView:ready", onMapReady);
+
       var mapView = new MapView({ el: '#map-view' });
       mapView.render();
+    }
+
+    // do we have a browse?
+    if ($('#browse-view').length) {
+      $('#browse-view').show();
+
+      var browseSlickView = new BrowseSlickView({ el: '#browse-slick-view' });
     }
 
     $(window).resize(function() {
@@ -136,6 +146,31 @@ define([
         mapView.filter($(this).attr('data-filter'));
       }
     });
+
+    function filterArt(strFilter) {
+      var strURL = 'content/filter/' + strFilter;      
+//      console.log(strURL);
+      $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: strURL,
+        error: function(data) {
+//          console.log('error:'+data.responseText);      
+//          console.log(data);      
+        },
+        success: function(data) {      
+//          console.log('success');
+//          console.log(data);
+
+          mapView.filter(data);
+          browseSlickView.render(data);
+        }
+      });
+    }
+
+    function onMapReady() {
+      filterArt('all');
+    }    
   };
 
   return { 

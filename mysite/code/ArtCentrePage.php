@@ -9,6 +9,7 @@ class ArtCentrePage extends Page {
   );
 
   private static $has_many = array(
+    'ArtCentrePhotoElements' => 'ArtCentrePhotoElement',
   );
 
   private static $has_one = array(
@@ -28,6 +29,20 @@ class ArtCentrePage extends Page {
 
     $fields->addFieldToTab('Root.Location', new TextField('LocationLat', 'Latitude'));  
     $fields->addFieldToTab('Root.Location', new TextField('LocationLng', 'Longitude'));  
+
+    // images
+    $config = GridFieldConfig_RelationEditor::create();
+    $config->removeComponentsByType('GridFieldPaginator');
+    $config->removeComponentsByType('GridFieldPageCount');
+    $config->addComponent(new GridFieldSortableRows('SortID'));
+
+    $photoElementField = new GridField(
+      'ArtCentrePhotoElements', // Field name
+      'Photo Element', // Field title
+      $this->ArtCentrePhotoElements(),
+      $config
+    );
+    $fields->addFieldToTab('Root.Gallery', $photoElementField); 
 
     return $fields;
   }

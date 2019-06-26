@@ -6,6 +6,8 @@ class PageElement extends DataObject {
     'Content' => 'HTMLText',
     'QuoteCredit' => 'Text',
     'Quote' => 'HTMLText',
+    'FeatureTitle' => 'Text',
+    'Feature' => 'HTMLText',
     'ImageSize'=>'Int'
   );
 
@@ -54,7 +56,10 @@ class PageElement extends DataObject {
       new HtmlEditorField('Content', 'Content'),
       new LiteralField ('literalfield', '<strong>Quote Element</strong>'),
       new TextareaField('Quote', 'Text'),
-      new TextField('QuoteCredit', 'Credit'));
+      new TextField('QuoteCredit', 'Credit'),
+      new LiteralField ('literalfield', '<strong>Feature Element</strong>'),
+      new TextField('FeatureTitle', 'Title'),
+      new TextareaField('Feature', 'Text'));
 
     return $fields; 
  }  

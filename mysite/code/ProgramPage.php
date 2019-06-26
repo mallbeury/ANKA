@@ -2,6 +2,7 @@
 class ProgramPage extends Page {
 
   private static $db = array(
+    'TitleTextFormatted' => 'Text'
   );
 
   private static $has_many = array(
@@ -12,6 +13,8 @@ class ProgramPage extends Page {
 
   function getCMSFields() {
     $fields = parent::getCMSFields();
+
+    $fields->addFieldToTab('Root.Main', new TextareaField('TitleTextFormatted', 'Formatted Title'), 'Content');
 
     return $fields;
   }
