@@ -1,0 +1,28 @@
+#content-view {
+  padding-bottom: 92px;
+}
+
+#intro-view a {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+#intro-view li {
+  padding-top: 24px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #intro-view a {
+    font-size: 1.8em;
+  }
+}
+
+/* Small devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

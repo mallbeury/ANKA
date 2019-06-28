@@ -13,6 +13,7 @@ require.config({
     visible: 'libs/jquery.visible.min',
     macy: 'libs/macy',
     slick: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min',
+    parallax: 'libs/parallax.min',
     mapboxgl: '//api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl'
   },
   shim: {
@@ -32,9 +33,85 @@ require.config({
     'imagesLoaded': {
       deps: ['jquery'],
       exports: 'imagesLoaded'
+    },
+    'parallax' : {
+      deps: ['jquery']
     }    
   }
 });
+
+function getBootstrapDeviceSize() {
+  return $('#users-device-size').find('div:visible').first().attr('id');
+}
+
+function closeSmallMenuSubmenu() {
+  $('.small-menu-view .mainmenu').removeClass('open');
+  $('body').removeClass('lock');
+}
+
+function changeBigMenuSubmenu() {
+  $('.big-menu-view .link').removeClass('open');
+}
+
+function closeBigMenuSubmenu() {
+  changeBigMenuSubmenu();
+  $('.big-menu-view .mainmenu').removeClass('open');
+}
+
+function handleResize() {
+  if (getBootstrapDeviceSize() != 'xs') {
+    closeSmallMenuSubmenu();
+  }
+}
+
+function setupUI() {
+  // big menu
+  $('.big-menu-view .link').mouseover(function(evt){
+    changeBigMenuSubmenu();
+
+    $('.big-menu-view .mainmenu').addClass('open');
+    $(this).addClass('open');
+  });
+
+  $('.big-menu-view').mouseleave(function(evt){
+    closeBigMenuSubmenu();
+  });
+
+  // small menu
+  $('.small-menu-view .hamburger-menu').click(function(evt){
+    $('.small-menu-view .mainmenu').addClass('open');
+
+    $('body').addClass('lock');
+  });
+
+  $('.small-menu-view .close-btn').click(function(evt){
+    closeSmallMenuSubmenu();
+  });
+
+  // head on down
+  $('.nav-down').click(function(evt){
+    $('html, body').animate({
+      scrollTop: $("#message-view").offset().top
+    }, 1000);
+  });
+
+  // top
+  $('.top-link').click(function(evt){
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1000);      
+  });
+
+  // search
+  $('.search-btn').click(function(evt){
+    $('#search-view').addClass('active');
+  });
+
+  $('.close-btn', $('#search-view')).click(function(evt){
+    $('#search-view').removeClass('active');
+  });
+
+}
 
 // Load our app module and pass it to our definition function
 require(['controller/' + APP], function(App){

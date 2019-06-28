@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+#content-view {
+  padding-bottom: 40px;
+}
+
 .standard-view {
   margin-left: 16px;
   margin-right: 16px;
