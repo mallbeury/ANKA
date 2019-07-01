@@ -11,6 +11,21 @@
   min-height: 500px;
 }
 
+#hero-view .video-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#hero-view .video-container video {
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #hero-view .title {
   position: absolute;
   top: 0;

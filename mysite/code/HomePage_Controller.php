@@ -10,7 +10,8 @@ class HomePage extends Page {
     'HowContent' => 'HTMLText',
     'HowImageCredit' => 'Text',
     'KeepUpImageCredit' => 'Text',
-    'ImpactImageCredit' => 'Text'
+    'ImpactImageCredit' => 'Text',
+    'FeatureImageCredit' => 'Text'
   );
 
   private static $has_many = array(
@@ -20,7 +21,8 @@ class HomePage extends Page {
     'WhoImage' => 'Image',
     'HowImage' => 'Image',
     'KeepUpImage' => 'Image',
-    'ImpactImage' => 'Image'
+    'ImpactImage' => 'Image',
+    'FeatureImage' => 'Image'
   );
 
   function getCMSFields() {
@@ -51,6 +53,12 @@ class HomePage extends Page {
     $uploadField2->setCanUpload(false);
     $fields->addFieldToTab('Root.WhatWeDo', $uploadField2);
     $fields->addFieldToTab('Root.WhatWeDo', new TextField('HowImageCredit', 'Credit'));
+
+    // feature
+    $uploadField5 = new UploadField($name = 'FeatureImage', $title = 'Image');
+    $uploadField5->setCanUpload(false);
+    $fields->addFieldToTab('Root.Feature', $uploadField5);
+    $fields->addFieldToTab('Root.Feature', new TextField('FeatureImageCredit', 'Credit'));
 
     // keep up
     $uploadField3 = new UploadField($name = 'KeepUpImage', $title = 'Image');
