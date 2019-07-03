@@ -68,7 +68,7 @@ define([
             15, 15,
             20, 20
           ],      
-          "circle-color": "#007cbf",
+          "circle-color": "#f2685f",
           "circle-opacity": 1,
           "circle-stroke-width": 0,
         },

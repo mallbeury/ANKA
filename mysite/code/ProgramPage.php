@@ -35,7 +35,7 @@ class ProgramPage extends Page {
   }
 
 }
-class ProgramPagee_Controller extends Page_Controller {
+class ProgramPage_Controller extends Page_Controller {
   private static $allowed_actions = array (
   );
 

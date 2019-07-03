@@ -11,7 +11,11 @@ class HomePage extends Page {
     'HowImageCredit' => 'Text',
     'KeepUpImageCredit' => 'Text',
     'ImpactImageCredit' => 'Text',
-    'FeatureImageCredit' => 'Text'
+    'FeatureImageCredit' => 'Text',
+    'Project1ImageCredit' => 'Text',
+    'Project2ImageCredit' => 'Text',
+    'Project1Content' => 'HTMLText',
+    'Project2Content' => 'HTMLText'
   );
 
   private static $has_many = array(
@@ -22,7 +26,11 @@ class HomePage extends Page {
     'HowImage' => 'Image',
     'KeepUpImage' => 'Image',
     'ImpactImage' => 'Image',
-    'FeatureImage' => 'Image'
+    'FeatureImage' => 'Image',
+    'Project1' => 'SiteTree',
+    'Project2' => 'SiteTree',
+    'Project1Image' => 'Image',
+    'Project2Image' => 'Image'
   );
 
   function getCMSFields() {
@@ -60,6 +68,23 @@ class HomePage extends Page {
     $fields->addFieldToTab('Root.Feature', $uploadField5);
     $fields->addFieldToTab('Root.Feature', new TextField('FeatureImageCredit', 'Credit'));
 
+    // projects
+    $fields->addFieldToTab('Root.Projects', new LiteralField ('literalfield', '<strong>Project 1</strong>'));
+    $fields->addFieldToTab('Root.Projects', new HtmlEditorField('Project1Content', 'Text'));
+    $uploadFieldProject1 = new UploadField($name = 'Project1Image', $title = 'Image');
+    $uploadFieldProject1->setCanUpload(false);
+    $fields->addFieldToTab('Root.Projects', $uploadFieldProject1);
+    $fields->addFieldToTab('Root.Projects', new TreeDropdownField('Project1ID', 'Project', 'SiteTree'));
+    $fields->addFieldToTab('Root.Projects', new TextField('Project1ImageCredit', 'Credit'));
+
+    $fields->addFieldToTab('Root.Projects', new LiteralField ('literalfield', '<strong>Project 2</strong>'));
+    $fields->addFieldToTab('Root.Projects', new HtmlEditorField('Project2Content', 'Text'));
+    $uploadFieldProject2 = new UploadField($name = 'Project2Image', $title = 'Image');
+    $uploadFieldProject2->setCanUpload(false);
+    $fields->addFieldToTab('Root.Projects', $uploadFieldProject2);
+    $fields->addFieldToTab('Root.Projects', new TextField('Project2ImageCredit', 'Credit'));
+    $fields->addFieldToTab('Root.Projects', new TreeDropdownField('Project2ID', 'Project', 'SiteTree'));
+
     // keep up
     $uploadField3 = new UploadField($name = 'KeepUpImage', $title = 'Image');
     $uploadField3->setCanUpload(false);
@@ -69,8 +94,8 @@ class HomePage extends Page {
     // impact
     $uploadField4 = new UploadField($name = 'ImpactImage', $title = 'Image');
     $uploadField4->setCanUpload(false);
-    $fields->addFieldToTab('Root.Impact', $uploadField4);
     $fields->addFieldToTab('Root.Impact', new TextField('ImpactImageCredit', 'Credit'));
+    $fields->addFieldToTab('Root.Impact', $uploadField4);
 
     return $fields;
   }
