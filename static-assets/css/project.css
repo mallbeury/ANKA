@@ -1,0 +1,63 @@
+#content-view {
+  padding-bottom: 40px;
+}
+
+/* PROJECTS VIEW */
+/******************************************/
+#projects-view {
+  padding-top: 48px;
+  padding-bottom: 78px;
+}
+
+#projects-view h1 {
+  padding: 10px 0 20px 0;
+  border-top: 2px solid #000;
+  font-size: 1.6em;
+  line-height: 1.1em;
+}
+
+#projects-view ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+#projects-view li {
+  width: 100%;
+  padding: 0 10px 22px 10px;
+}
+
+#projects-view li img {
+  margin-bottom: 4px;
+  max-width: 100%;
+}
+
+#projects-view ul li h1 {
+  border: none;
+  padding: 4px 0;
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #projects-view li {
+    width: 50%;
+  }
+
+  #image-view .image.format-left {
+    margin-right: 25%;
+  }
+  
+  #image-view .image.format-right {
+    margin-left: 25%;
+  }
+}
+
+/* Small devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

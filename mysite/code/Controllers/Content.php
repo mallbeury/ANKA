@@ -7,18 +7,21 @@ class Content_Controller extends Controller {
 
       switch ($param["Filter"]) {
         case 'all':
-          $this->Results = DataObject::get('ArtCentrePage');
+          $this->Results = DataObject::get(
+            $callerClass = "ArtCentrePage",
+            $filter = "", 
+            $sort = "Title asc"
+          );
           break;
 
         default:
           $this->Results = DataObject::get( 
             $callerClass = "ArtCentrePage", 
             $filter = "ParentID = " . $param["Filter"], 
-            $sort = "",
+            $sort = "Title asc",
             $join = "",
             $limit = "" 
             );
-
           break;
       }
 

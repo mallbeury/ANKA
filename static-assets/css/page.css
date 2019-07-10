@@ -59,6 +59,11 @@
   line-height: 1.2em;
 }
 
+#about-view ul,
+#about-view ol {
+  padding-bottom: 10px;
+}
+
 #about-view ol {
   padding-left: 16px; 
 }
@@ -418,7 +423,7 @@
   }
 
   .image .credit.under  {
-    width: 50%;
+    width: 66.666666%;
   }
 
   .standard-view {
@@ -439,13 +444,10 @@
 @media (min-width: 992px) {
   .limit-width h1,
   .limit-width p,
-  .limit-width table {
-    width: 65%;
-  }
-
+  .limit-width table,
   .limit-width ul,
   .limit-width ol {
-    width: 50%;
+    width: 65%;
   }
 
   .push-right h1,

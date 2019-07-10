@@ -1,5 +1,5 @@
 <?php
-class PageElement extends DataObject {
+class ProjectElement extends DataObject {
   private static $db = array(
     'Name' => 'Varchar',
     'SortID'=>'Int',
@@ -14,7 +14,7 @@ class PageElement extends DataObject {
 
   private static $has_one = array(
     'HeroImage' => 'Image', 
-    'Page' => 'StandardPage'
+    'Page' => 'ProjectPage'
   );    
   
   // this function creates the thumbnail for the summary fields to use 
@@ -41,7 +41,7 @@ class PageElement extends DataObject {
     $imageSizeField = new OptionsetField(
       $name = "ImageSize",
       $title = "Size",
-      $source = array("60%", "90%", "FULL"),
+      $source = array("LEFT", "RIGHT", "FULL"),
         $value = 0
     );    
 

@@ -74,8 +74,8 @@ class HomePage extends Page {
     $uploadFieldProject1 = new UploadField($name = 'Project1Image', $title = 'Image');
     $uploadFieldProject1->setCanUpload(false);
     $fields->addFieldToTab('Root.Projects', $uploadFieldProject1);
-    $fields->addFieldToTab('Root.Projects', new TreeDropdownField('Project1ID', 'Project', 'SiteTree'));
     $fields->addFieldToTab('Root.Projects', new TextField('Project1ImageCredit', 'Credit'));
+    $fields->addFieldToTab('Root.Projects', new TreeDropdownField('Project1ID', 'Project', 'SiteTree'));
 
     $fields->addFieldToTab('Root.Projects', new LiteralField ('literalfield', '<strong>Project 2</strong>'));
     $fields->addFieldToTab('Root.Projects', new HtmlEditorField('Project2Content', 'Text'));
@@ -94,8 +94,8 @@ class HomePage extends Page {
     // impact
     $uploadField4 = new UploadField($name = 'ImpactImage', $title = 'Image');
     $uploadField4->setCanUpload(false);
-    $fields->addFieldToTab('Root.Impact', new TextField('ImpactImageCredit', 'Credit'));
     $fields->addFieldToTab('Root.Impact', $uploadField4);
+    $fields->addFieldToTab('Root.Impact', new TextField('ImpactImageCredit', 'Credit'));
 
     return $fields;
   }
