@@ -22,6 +22,7 @@ class HomePage extends Page {
   );
 
   private static $has_one = array(
+    'HeroVideoFile' => 'File', 
     'WhoImage' => 'Image',
     'HowImage' => 'Image',
     'KeepUpImage' => 'Image',
@@ -96,6 +97,13 @@ class HomePage extends Page {
     $uploadField4->setCanUpload(false);
     $fields->addFieldToTab('Root.Impact', $uploadField4);
     $fields->addFieldToTab('Root.Impact', new TextField('ImpactImageCredit', 'Credit'));
+
+    // video
+    $uploadFieldVideo = new UploadField('HeroVideoFile', 'Hero Video');
+    $uploadFieldVideo->setAllowedExtensions(array('m4v'));
+    $uploadFieldVideo->setCanUpload(false);
+
+    $fields->addFieldToTab('Root.Video', $uploadFieldVideo);
 
     return $fields;
   }
