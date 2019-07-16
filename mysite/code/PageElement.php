@@ -41,7 +41,7 @@ class PageElement extends DataObject {
     $imageSizeField = new OptionsetField(
       $name = "ImageSize",
       $title = "Size",
-      $source = array("60%", "90%", "FULL"),
+      $source = array("50% - LEFT", "90% - LEFT", "50% - RIGHT", "FULL"),
         $value = 0
     );    
 

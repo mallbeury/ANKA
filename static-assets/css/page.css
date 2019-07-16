@@ -414,8 +414,12 @@
     font-size: 1.1em;
   }
 
+  #image-view .image.left-margin {
+    margin-left: 50%;
+  }
+
   #image-view .image.right-margin {
-    margin-right: 33%;
+    margin-right: 50%;
   }
 
   #image-view .image.right-margin-small {

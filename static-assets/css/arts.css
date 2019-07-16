@@ -57,6 +57,11 @@
   -webkit-transition: opacity 0.5s ease-in-out;
 }
 
+#art-centre-index-view .image-holder {
+  overflow: hidden;
+  background: red;
+}
+
 #art-centre-index-view .ready li {
   opacity: 1;
 }

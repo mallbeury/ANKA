@@ -22,6 +22,31 @@ define([
   var initialize = function() {
     var bFirstResize = true;
 
+    function showPreRoll() {
+      var elPreRoll = $('#preroll-view');
+      var elPreRollBrand = $('#preroll-view .brand');
+
+      setTimeout(function() {
+        elPreRollBrand.addClass('moveOn');
+        elPreRollBrand.addClass('focus');
+
+        setTimeout(function() {
+          elPreRollBrand.removeClass('focus');
+
+          setTimeout(function() {
+            elPreRoll.addClass('blur');
+
+            setTimeout(function() {
+              elPreRoll.addClass('hide');
+            }.bind(this), 1000)    
+
+          }.bind(this), 1000)    
+
+        }.bind(this), 2000)    
+
+      }.bind(this), 1000)
+    }
+
     function handleCustomResize() {
       handleResize();
 
@@ -33,6 +58,10 @@ define([
         $('#hero-view').show();
         $('#hero-view').css('height', nWindowHeight - $('#menu-view').height());
       }
+    }
+
+    if ($('#preroll-view').length) {
+      showPreRoll();
     }
 
     app.dispatcher.on("MapView:ready", onMapReady);

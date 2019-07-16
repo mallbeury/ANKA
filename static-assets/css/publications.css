@@ -1,0 +1,72 @@
+#content-view {
+  padding-bottom: 40px;
+}
+
+#publications-view {
+}
+
+#publications-view h1 {
+  font-size: 1.8em;
+  padding: 14px 0 52px 0;
+  border-top: 2px solid #000;
+}
+
+#publications-view ul {
+}
+
+#publications-view li img {
+  background: #F0F0F1;
+  padding: 26px 38px;
+  width: 100%;
+}
+
+#publications-view li .publication-download {
+  margin: 26px 0 0 0;
+  padding: 8px 0 64px 0;
+  border-top: 2px solid #000;
+}
+
+#publications-view li .publication-download .details {
+  display: inline-block;
+  width: 90%;
+}
+
+#publications-view li .publication-download .details .download {
+  font-size: 1.1em;
+}
+
+#publications-view li .publication-download .details .size {
+  padding-left: 4px;
+  font-size: 0.8em;
+}
+
+#publications-view li .publication-download .icon {
+  display: inline-block;
+  width: 10%;
+  text-align: right;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #publications-view ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  #publications-view li {
+    padding: 0 10px 0 10px;
+    width: 50%;
+  }  
+}
+
+/* Small devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+  #publications-view li {
+    width: 33.33333%;
+  }  
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

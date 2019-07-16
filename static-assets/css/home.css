@@ -1,3 +1,47 @@
+/* PREROLL VIEW */
+/******************************************/
+#preroll-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: #C1BAA4;
+}
+
+#preroll-view.hide {
+  display: none;
+}
+
+#preroll-view.blur {
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+
+#preroll-view .brandContainer {
+  position: relative;
+  height: 100%;
+  top: 50%;
+  margin-top: -45px;
+  text-align: center;
+}
+
+#preroll-view .brandContainer .brand {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+#preroll-view .brandContainer .brand.moveOn {
+  top: 0;          
+}
+
+#preroll-view .brandContainer .brand.focus {
+  opacity: 1;
+}
+
 #menu-line-break {
   display: none;
 }
@@ -308,6 +352,11 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .standard-view {
+    margin-left: 86px;
+    margin-right: 86px; 
+  }
+
   #hero-view {
     min-height: 642px;
   }
@@ -329,6 +378,11 @@
     font-size: 3em;
   }
 
+  #message-view .standard-view {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
   #map-view .title {
     padding-top: 94px;
   }
@@ -346,13 +400,13 @@
   #who-we-are-view .text {  
     padding-right: 46px;
     display: inline-block;
-    width: 60%;
+    width: 50%;
   }
 
   #who-we-are-view .image {  
     padding: 42px 0 0 0;
     display: inline-block;
-    width: 40%;
+    width: 50%;
   }
 
   #what-we-do-view h1 {
@@ -364,21 +418,16 @@
     padding: 98px 0 98px 0;
   }
 
-  #what-we-do-view .what-we-do-view-container {  
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
   #what-we-do-view .image {  
     padding: 72px 0 0 0;
     display: inline-block;
-    width: 40%;
+    width: 50%;
   }
 
   #what-we-do-view .text {  
     padding-left: 46px;
     display: inline-block;
-    width: 60%;
+    width: 50%;
   }
 
   #what-we-do-view ul li {
@@ -421,8 +470,8 @@
   }
 
   #keep-up-view .keep-up-view-container {  
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   #keep-up-view .image {  
@@ -432,7 +481,7 @@
   }
 
   #keep-up-view .text {  
-    padding: 0 0 0 46px;
+    padding: 0 80px 0 46px;
     display: inline-block;
     width: 50%;
   }
@@ -482,7 +531,7 @@
   }
 
   #message-view .standard-view {
-    width: 55%;
+    width: 640px;
   }
 
   #who-we-are-view .text {  
@@ -541,6 +590,10 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .standard-view {
+    margin: 0 auto;
+  }
+
   #message-view .standard-view {
     margin-left: 30px;
     margin-right: 30px;
@@ -596,14 +649,13 @@
   }
 
   #keep-up-view .image {  
-    width: 40%;
     padding: 0;
   }
 
   #keep-up-view .text {  
-    width: 60%;
     padding-top: 70px;
     padding-left: 114px;
+    padding-right: 0;
   }
 
   #keep-up-view form .field {
@@ -613,10 +665,6 @@
   #keep-up-view form .btn {
     margin-top: 0;
     margin-left: 10px;
-  }
-
-  #help-us-view .help-us-view-container {  
-    width: 988px;
   }
 
   #help-us-view .image {  

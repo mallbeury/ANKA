@@ -107,5 +107,14 @@ class HomePage_Controller extends Page_Controller {
 
   public function init() {
     parent::init();
+
+    $bShowSplash = true;
+
+    if (Session::get('splashshown')) {
+      $bShowSplash = false;
+    }
+    $this->ShowSplash = $bShowSplash;    
+
+    Session::clear('splashshown');
   }
 }

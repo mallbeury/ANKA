@@ -3,6 +3,7 @@ class ArtCentresPage extends Page {
   static $allowed_children = array("ArtCentresRegionPage");
 
   private static $db = array(
+    'TitleTextFormatted' => 'Text'
   );
 
   private static $has_many = array(
@@ -14,8 +15,7 @@ class ArtCentresPage extends Page {
   function getCMSFields() {
     $fields = parent::getCMSFields();
 
-    // remove fields
-    $fields->removeFieldFromTab('Root.Main', 'Content');
+    $fields->addFieldToTab('Root.Main', new TextareaField('TitleTextFormatted', 'Formatted Title'), 'Content');
 
     return $fields;
   }
