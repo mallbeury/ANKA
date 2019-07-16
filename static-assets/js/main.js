@@ -110,7 +110,42 @@ function setupUI() {
   $('.close-btn', $('#search-view')).click(function(evt){
     $('#search-view').removeClass('active');
   });
+}
 
+function validateForm(elForm){
+  var bValid = true;
+
+  $('.form-group', elForm).removeClass('has-error');
+  $('.help-block', elForm).hide();
+
+  // manage errs
+  $('.required', elForm).each(function(){
+    if ($(this).val() == '') {
+      bValid = false;
+      var elParent = $(this).parent();
+      elParent.addClass('has-error');
+      $('.help-block', elParent).show();
+      // highlight that there is at least 1 error
+      var elFormErr = $('.form-error', elForm);
+      if (elFormErr.length) {
+        elFormErr.addClass('has-error');
+        $('.help-block', elFormErr).show();
+      }
+    }
+  });
+  return bValid;
+}
+
+function processSubscriptionForm(elForm) {
+  $('.thanks', elForm).hide();
+  
+//  $.post("server/mailerproxy.php", elForm.serialize()).success(function(data) {
+//    console.log(data);
+//  });
+
+  if (validateForm(elForm)) {
+    $('.thanks', elForm).show();
+  }
 }
 
 // Load our app module and pass it to our definition function

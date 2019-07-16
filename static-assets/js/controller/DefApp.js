@@ -68,6 +68,12 @@ define([
       var browseSlickView = new BrowseSlickView({ el: '#browse-slick-view' });
     }
 
+    $('#signup').submit(function(evt){
+      evt.preventDefault();
+
+      processSubscriptionForm($(this));
+    });
+
     $(window).resize(function() {
       handleResize();
     });

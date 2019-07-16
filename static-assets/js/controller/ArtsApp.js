@@ -64,6 +64,12 @@ define([
       mapView.render();
     }
 
+    $('#signup').submit(function(evt){
+      evt.preventDefault();
+
+      processSubscriptionForm($(this));
+    });
+
     $(window).resize(function() {
       handleResize();
     });

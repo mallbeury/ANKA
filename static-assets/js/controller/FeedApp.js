@@ -31,6 +31,12 @@ define([
     var socialFeedView = new SocialFeedView({ el: '#journal-view' });
     socialFeedView.loadFeed();
 
+    $('#signup').submit(function(evt){
+      evt.preventDefault();
+
+      processSubscriptionForm($(this));
+    });
+
     function onSocialFeedReady() {
       socialFeedView.render();
     }

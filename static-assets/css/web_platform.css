@@ -91,6 +91,24 @@ a.more-link img {
   padding-left: 16px;
 }
 
+.form-group {
+  margin: 0;
+}
+
+.help-block {
+  display: none;
+  text-align: left;
+}
+
+.has-error .help-block {
+  color: #fff;  
+}
+
+.newsletter .thanks {
+  display: none;
+  padding-top: 16px;
+}
+
 .btn {
   height: 44px;
   vertical-align: top;
