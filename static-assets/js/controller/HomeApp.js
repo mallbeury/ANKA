@@ -81,7 +81,9 @@ define([
     $('#signup-home').submit(function(evt){
       evt.preventDefault();
 
-      processSubscriptionForm($(this));
+      if (processSubscriptionForm($(this))) {
+        $('.btn', $(this)).addClass('complete');
+      }
     });
 
     $(window).resize(function() {

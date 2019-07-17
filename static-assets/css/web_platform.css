@@ -13,6 +13,7 @@ body.lock {
 }
 
 h1, h2 {
+  font-family: 'Work Sans', sans-serif;
   margin: 0;
   padding: 0;
   font-size: 1em;
@@ -80,11 +81,17 @@ a.more-link:visited {
 }
 
 a.more-link span {
-  border-bottom: 2px solid #000;  
+  border-bottom: 2px solid #000;
+}
+
+a.more-link:hover path,
+a.more-link:hover polyline {
+  opacity: 0.6;
 }
 
 a.more-link:hover span {
-  border-bottom: none;
+  opacity: 0.6;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.6);
 }
 
 a.more-link img {
@@ -148,6 +155,15 @@ a.btn {
   stroke: #000;
 }
 
+.btn:focus path,
+.btn:focus polyline {
+  stroke: #000;
+}
+
+.btn.complete {
+  background: #F26A61;
+}
+
 .btn.btn-transparent {
   border: 2px solid #000;
   color: #000;
@@ -157,6 +173,16 @@ a.btn {
 .btn.btn-transparent path,
 .btn.btn-transparent polyline {
   stroke: #000;
+}
+
+.btn.btn-transparent:hover {
+  opacity: 0.6;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+}
+
+.btn.btn-transparent:hover path,
+.btn.btn-transparent:hover polyline {
+  opacity: 0.6;
 }
 
 form input {
@@ -342,6 +368,8 @@ form input {
 }
 
 #menu-view .big-menu-view .link.open .title {
+  /* mla */
+  color: #979BA0;
   border-bottom: 1.5px solid #D8D8D8;
 }
 

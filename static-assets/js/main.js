@@ -137,6 +137,8 @@ function validateForm(elForm){
 }
 
 function processSubscriptionForm(elForm) {
+  var bValid = false;
+
   $('.thanks', elForm).hide();
   
 //  $.post("server/mailerproxy.php", elForm.serialize()).success(function(data) {
@@ -144,8 +146,10 @@ function processSubscriptionForm(elForm) {
 //  });
 
   if (validateForm(elForm)) {
+    bValid = true;
     $('.thanks', elForm).show();
   }
+  return bValid;
 }
 
 // Load our app module and pass it to our definition function

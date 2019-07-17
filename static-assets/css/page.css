@@ -168,6 +168,10 @@
   color: #979BA0;
 }
 
+#browse-view .nav-view a:hover {
+  opacity: 0.6;
+}
+
 #browse-view .nav-view .nav-left {
   padding-left: 20px;
 }
@@ -178,6 +182,11 @@
 
 #browse-view .nav-view span:hover {
   cursor: pointer;
+}
+
+#browse-view .nav-view span:hover path,
+#browse-view .nav-view span:hover polyline {
+  opacity: 0.6;
 }
 
 #browse-view .slick-slide {

@@ -1,7 +1,3 @@
-.has-error .help-block {
-  color: #000;
-}
-
 /* PREROLL VIEW */
 /******************************************/
 #preroll-view {
@@ -255,6 +251,11 @@
   padding-top: 20px;
 }
 
+#featured-projects-view p.nav {
+  font-size: 1.4em;
+  line-height: 1.2em;
+}
+
 #featured-projects-view h1 {
   padding: 0 0 32px 0;
   font-size: 2.6em;
@@ -281,6 +282,10 @@
   padding-top: 68px;
   padding-bottom: 76px;  
   background: #eaecec;
+}
+
+#keep-up-view .has-error .help-block {
+  color: #000;
 }
 
 #keep-up-view .text {
