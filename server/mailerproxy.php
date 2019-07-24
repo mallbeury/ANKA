@@ -5,7 +5,7 @@
 
 header("Access-Control-Allow-Origin: *");  
 
-define("EMAIL_SERVER_URL", "http://kkt.us11.list-manage.com/subscribe/post?u=e3f89ab8d64e8ad8c27e9c4e5&amp;id=cc8a151ee2");
+define("EMAIL_SERVER_URL", "https://ankaaa.us5.list-manage.com/subscribe/post?u=4cba3de9d0c3186e1e4c74cd9&amp;id=9ec1f9b522");
 
 $strEmail = "";
 if (isset($_REQUEST['form-email'])) {

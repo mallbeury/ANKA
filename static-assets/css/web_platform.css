@@ -38,6 +38,11 @@ li {
   color: #979BA0;
 }
 
+.nopadding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 :focus {
   outline: none;
   outline-color: transparent;
@@ -81,7 +86,13 @@ a.more-link:visited {
 }
 
 a.more-link span {
+  margin-right: 4px;
   border-bottom: 2px solid #000;
+}
+
+a.more-link svg {
+  position: relative;
+  top: 2px;
 }
 
 a.more-link:hover path,
@@ -118,6 +129,7 @@ a.more-link img {
 
 .btn {
   height: 44px;
+  line-height: 32px;
   vertical-align: top;
   border: none;
   border-radius: 0;
@@ -126,7 +138,6 @@ a.more-link img {
 }
 
 a.btn {
-  line-height: 28px;
   text-decoration: none;
 }
 
@@ -165,6 +176,7 @@ a.btn {
 }
 
 .btn.btn-transparent {
+  line-height: 28px;
   border: 2px solid #000;
   color: #000;
   background: transparent;
@@ -207,10 +219,15 @@ form input {
 }
 
 #search-view .search-form {
+  display: none;
   position: absolute;
   top: 12px;
   right: 56px;
   width: 400px;
+}
+
+#search-view.active .search-form {
+  display: block;
 }
 
 #search-view .search-form input {
@@ -233,7 +250,30 @@ form input {
 
 #search-view .close-btn {
   position: absolute;
-  top: 12px;
+  top: 16px;
+  right: 28px;
+}
+
+#acknowledge-view {
+  width: 100%;
+  height: 0;
+  font-size: 0.9em;
+  line-height: 1em;
+  color: #000;
+  background: #F26A61;
+  transition: all .6s cubic-bezier(.23,1,.32,1);
+}
+#acknowledge-view.active {
+  height: 45px;  
+}
+
+#acknowledge-view .text {
+  padding: 8px 30px 8px 15px;
+}
+
+#acknowledge-view .close-btn {
+  position: absolute;
+  top: 16px;
   right: 28px;
 }
 
@@ -368,9 +408,8 @@ form input {
 }
 
 #menu-view .big-menu-view .link.open .title {
-  /* mla */
   color: #979BA0;
-  border-bottom: 1.5px solid #D8D8D8;
+  border-bottom: 1.5px solid #979BA0;
 }
 
 #menu-view .big-menu-view .submenu {
@@ -587,7 +626,7 @@ footer .credit-view {
   font-size: 0.7em;
   line-height: 1.3em;
   color: #FFF;
-  background: #000;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .image .credit.under  {
@@ -604,6 +643,10 @@ footer .credit-view {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  #acknowledge-view .text {
+    padding: 15px 30px 15px 15px;
+  }
+
   #menu-view {
     min-height: 107px;
   }

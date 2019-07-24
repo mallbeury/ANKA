@@ -1,13 +1,8 @@
 <?php
-class PageElement extends DataObject {
+class GalleryElement extends DataObject {
   private static $db = array(
     'Name' => 'Varchar',
     'SortID'=>'Int',
-    'Content' => 'HTMLText',
-    'QuoteCredit' => 'Text',
-    'Quote' => 'HTMLText',
-    'FeatureTitle' => 'Text',
-    'Feature' => 'HTMLText',
     'HeroImageCredit' => 'Text',
     'ImageSize'=>'Int'
   );
@@ -21,17 +16,9 @@ class PageElement extends DataObject {
   public function ImageThumbnail() { 
     return $this->HeroImage()->SetHeight(100); 
   }
-
-  public function FormatContent() {
-    $obj= HTMLText::create();
-    $obj->setValue($this->Content);
-     
-    return $obj->FirstSentence(); 
-  }
   
   public static $summary_fields = array( 
     'Name' => 'Name',
-    'FormatContent' => 'Content',     
     'ImageThumbnail' => 'Thumbnail' 
   );
   
@@ -41,7 +28,7 @@ class PageElement extends DataObject {
     $imageSizeField = new OptionsetField(
       $name = "ImageSize",
       $title = "Size",
-      $source = array("66%", "90%", "FULL"),
+      $source = array("50%", "75%", "75% - RIGHT"),
         $value = 0
     );    
 
@@ -50,14 +37,6 @@ class PageElement extends DataObject {
   
     $fields = new FieldList (
       new TextField('Name', 'Name'), 
-      new LiteralField ('literalfield', '<strong>Text Element</strong>'),
-      new HtmlEditorField('Content', 'Content'),
-      new LiteralField ('literalfield', '<strong>Quote Element</strong>'),
-      new TextareaField('Quote', 'Text'),
-      new TextField('QuoteCredit', 'Credit'),
-      new LiteralField ('literalfield', '<strong>Feature Element</strong>'),
-      new TextField('FeatureTitle', 'Title'),
-      new TextareaField('Feature', 'Text'),
       new LiteralField ('literalfield', '<strong>Image Element</strong>'), 
       $uploadField,
       new TextField('HeroImageCredit', 'Credit'),

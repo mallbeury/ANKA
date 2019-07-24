@@ -5,12 +5,13 @@ define([
   'backbone',
   'bootstrap',
   'modernizr',
+  'cookie',
   'visible',
   'macy',
   'imageScale',
   'views/MapView',
   'views/ArtCentresView'
-], function(_, Backbone, bootstrap, modernizr, visible, Macy, imageScale, MapView, ArtCentresView){
+], function(_, Backbone, bootstrap, modernizr, cookie, visible, Macy, imageScale, MapView, ArtCentresView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {

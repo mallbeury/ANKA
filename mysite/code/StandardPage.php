@@ -7,6 +7,7 @@ class StandardPage extends Page {
 
   private static $has_many = array(
     'PageElements' => 'PageElement',
+    'GalleryElements' => 'GalleryElement',
     'DownloadElements' => 'DownloadElement',
   );
 
@@ -34,17 +35,31 @@ class StandardPage extends Page {
     );
     $fields->addFieldToTab('Root.Main', $pageElementField); 
 
-    // Downloads
+    // Gallery
     $config2 = GridFieldConfig_RelationEditor::create();
     $config2->removeComponentsByType('GridFieldPaginator');
     $config2->removeComponentsByType('GridFieldPageCount');
     $config2->addComponent(new GridFieldSortableRows('SortID'));
 
+    $galleryElementField = new GridField(
+      'GalleryElements', // Field name
+      'Gallery Element', // Field title
+      $this->GalleryElements(),
+      $config2
+    );
+    $fields->addFieldToTab('Root.Gallery', $galleryElementField); 
+
+    // Downloads
+    $config3 = GridFieldConfig_RelationEditor::create();
+    $config3->removeComponentsByType('GridFieldPaginator');
+    $config3->removeComponentsByType('GridFieldPageCount');
+    $config3->addComponent(new GridFieldSortableRows('SortID'));
+
     $downloadElementField = new GridField(
       'DownloadElements', // Field name
       'Download Element', // Field title
       $this->DownloadElements(),
-      $config2
+      $config3
     );
     $fields->addFieldToTab('Root.Downloads', $downloadElementField); 
 

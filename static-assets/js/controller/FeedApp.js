@@ -5,9 +5,10 @@ define([
   'backbone',
   'bootstrap',
   'modernizr',
+  'cookie',
   'imageScale',
   'views/SocialFeedView'
-], function(_, Backbone, bootstrap, modernizr, imageScale, SocialFeedView){
+], function(_, Backbone, bootstrap, modernizr, cookie, imageScale, SocialFeedView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {

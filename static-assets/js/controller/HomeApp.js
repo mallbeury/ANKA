@@ -5,12 +5,13 @@ define([
   'backbone',
   'bootstrap',
   'modernizr',
+  'cookie',
   'visible',
   'imageScale',
   'parallax',
   'views/MapView',
   'views/BrowseSlickView'
-], function(_, Backbone, bootstrap, modernizr, visible, imageScale, parallax, MapView, BrowseSlickView){
+], function(_, Backbone, bootstrap, modernizr, cookie, visible, imageScale, parallax, MapView, BrowseSlickView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {

@@ -1,3 +1,6 @@
+var COOKIE_PREFIX = 'anka';
+var COOKIE_DELIM = '_';
+
 require.config({
   waitSeconds: 10,
   paths: {
@@ -10,6 +13,7 @@ require.config({
     modernizr: 'libs/modernizr-custom',
     imageScale: 'libs/image-scale.min',
     imagesLoaded: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min',
+    cookie: 'libs/js.cookie',
     visible: 'libs/jquery.visible.min',
     macy: 'libs/macy',
     slick: '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min',
@@ -34,6 +38,9 @@ require.config({
       deps: ['jquery'],
       exports: 'imagesLoaded'
     },
+    'cookie' : {
+      deps: ['jquery']
+    },    
     'parallax' : {
       deps: ['jquery']
     }    
@@ -62,6 +69,20 @@ function handleResize() {
   if (getBootstrapDeviceSize() != 'xs') {
     closeSmallMenuSubmenu();
   }
+}
+
+function updateAckSeenCookie(value) {
+  var cookiePrefix = COOKIE_PREFIX + COOKIE_DELIM;
+
+  $.cookie(cookiePrefix + 'acknowledge_seen', value, { expires: 365, path: '/' });
+}
+
+function getAckSeenCookie() {
+  var cookiePrefix = COOKIE_PREFIX + COOKIE_DELIM;
+
+//  $.removeCookie(cookiePrefix + 'acknowledge_seen', { path: '/' });
+
+  return $.cookie(cookiePrefix + 'acknowledge_seen');
 }
 
 function setupUI() {
@@ -104,11 +125,24 @@ function setupUI() {
 
   // search
   $('.search-btn').click(function(evt){
+    $('#acknowledge-view').hide();
+    $('#acknowledge-view').removeClass('active');
     $('#search-view').addClass('active');
   });
 
   $('.close-btn', $('#search-view')).click(function(evt){
     $('#search-view').removeClass('active');
+  });
+
+  // inital show
+  $('#acknowledge-view').addClass('active');
+  if (getAckSeenCookie()) {
+    $('#acknowledge-view').removeClass('active');
+  }
+
+  $('.close-btn', $('#acknowledge-view')).click(function(evt){
+    $('#acknowledge-view').removeClass('active');
+    updateAckSeenCookie(true);
   });
 }
 
@@ -141,12 +175,13 @@ function processSubscriptionForm(elForm) {
 
   $('.thanks', elForm).hide();
   
-//  $.post("server/mailerproxy.php", elForm.serialize()).success(function(data) {
-//    console.log(data);
-//  });
-
   if (validateForm(elForm)) {
     bValid = true;
+
+    $.post("server/mailerproxy.php", elForm.serialize()).success(function(data) {
+      console.log(data);
+    });
+    
     $('.thanks', elForm).show();
   }
   return bValid;

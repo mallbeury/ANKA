@@ -59,6 +59,12 @@
   line-height: 1.2em;
 }
 
+#about-view td h1 {
+  border-top: 2px solid #979BA0;  
+  padding: 8px 0 10px 0;
+  font-size: 1.25em;
+}
+
 #about-view ul,
 #about-view ol {
   padding-bottom: 10px;
@@ -127,6 +133,17 @@
   border-top: 2px solid #000;  
 }
 
+/* GALLERY VIEW */
+/******************************************/
+#gallery-view {
+  margin-top: 46px;
+  margin-bottom: 46px;
+}
+
+#gallery-view .image {
+  margin-top: 24px;
+}
+
 /* IMAGE VIEW */
 /******************************************/
 #image-view {
@@ -150,7 +167,7 @@
 }
 
 #browse-view h1 {
-  padding: 4px 0;
+  padding: 6px 0 0 0;
 }
 
 #browse-view h2 {
@@ -220,6 +237,20 @@
   background: #f2685f;
 }
 
+.mapboxgl-ctrl-group,
+.map-popup .mapboxgl-popup-content {
+  border-radius: 0;
+}
+
+.map-popup h2 {
+  padding: 0 0 8px 0;
+  color: #979BA0;  
+}
+
+.map-popup img {
+  width: 100%;
+}
+
 /* MAP VIEW */
 /******************************************/
 #map-view .maps {
@@ -248,6 +279,81 @@
   left: 16px;
   width: 154px;
   height: 154px;
+}
+
+#map-view #map-key-ctrl {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: inline-block;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  color: #FFF;
+  background: #000;  
+}
+
+#map-view #map-key-ctrl:hover {
+  cursor: pointer;
+}
+
+#map-view #map-key-ctrl .key h1 {
+  font-size: 0.9em;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+#map-view #map-key-ctrl .key-close {
+  display: none;
+  font-size: 2em;
+}
+
+#map-view #map-key-ctrl.active .key {
+  display: none;
+}
+
+#map-view #map-key-ctrl.active .key-close {
+  display: inline-block;
+}
+
+#map-view #map-key {
+  display: none;
+  position: absolute;
+  bottom: 26px;
+  right: 32px;
+  background: #FFF;
+}
+
+#map-view #map-key ul {
+  padding: 14px;
+}
+
+#map-view #map-key ul li {
+  padding: 4px 0;
+}
+
+#map-view #map-key .key-title {
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+#map-view #map-key .key-colour {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  border-radius: 50%;  
+  background: #000;
+}
+
+#map-view #map-key h1 {
+  position: relative;
+  top: -4px;
+  display: inline-block;
+  font-size: 1.1em;
 }
 
 /* DOWNLOADS VIEW */
@@ -359,12 +465,17 @@
     padding-left: 19px; 
   }
 
+  #gallery-view .image {
+    margin-top: 82px;
+  }
+
   #browse-view {
     padding-top: 44px;
     padding-bottom: 92px;
   }
 
-  #browse-view h1, h2 {
+  #browse-view h1, 
+  #browse-view h2 {
     font-size: 1.1em;
   }
 
@@ -423,12 +534,8 @@
     font-size: 1.1em;
   }
 
-  #image-view .image.left-margin {
-    margin-left: 50%;
-  }
-
   #image-view .image.right-margin {
-    margin-right: 50%;
+    margin-right: 33.3333%;
   }
 
   #image-view .image.right-margin-small {

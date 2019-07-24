@@ -27,30 +27,53 @@
 /******************************************/
 #art-centre-index-view {
   min-height: 400px;
-  padding-top: 28px;
+  padding-top: 30px;
   padding-bottom: 52px;
 }
 
-#art-centre-index-view h1 {
+#art-centre-index-view .title {
   padding: 0 0 32px 0;
+}
+
+#art-centre-index-view .title h1 {
+  color: #000;
   font-size: 1.8em;
   line-height: 1.1em;
 }
 
+#art-centre-index-view .image-holder {
+  position: relative;
+}
+
+#art-centre-index-view .image-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #F0A693;
+  background-blend-mode: multiply;  
+}
+
 #art-centre-index-view img {
-  margin-bottom: 4px;
   max-width: 100%;
+}
+
+#art-centre-index-view a:hover .image-overlay {
+  display: block;
 }
 
 #art-centre-index-view ul {
   display: flex;
   flex-wrap: wrap;  
-  margin: 0 -10px;
+  margin: 0 -5px;
 }
 
 #art-centre-index-view li {
   width: 50%;
-  padding: 0 10px 22px 10px;
+  padding: 0 5px 22px 5px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
@@ -67,7 +90,7 @@
 }
 
 #art-centre-index-view li h1 {
-  padding: 4px 0;
+  padding: 8px 0 0 0;
   font-size: 1em;
   line-height: 1.3em;
 }
@@ -79,8 +102,16 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  #art-centre-index-view {
+    padding-top: 70px;
+  }
+
   #art-centre-index-view li {
     width: 33.3333333%;
+  }
+
+  #art-centre-index-view .title h1 {
+    font-size: 3em;
   }
 }
 

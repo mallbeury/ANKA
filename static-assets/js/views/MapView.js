@@ -32,7 +32,7 @@ define([
       geojson = {
         "type": "geojson",
         "data": {
-          "type": "FeatureCollection",          
+          "type": "FeatureCollection",
           features: []
         }
       };
@@ -46,6 +46,10 @@ define([
           },
           "properties": {
             "modelId": 1,
+            "description": item.title,
+            "region": item.title_parent,
+            "image": item.image,
+            "link": item.link
           }              
         };
         geojson.data.features.push(jsonFeature);
@@ -74,6 +78,24 @@ define([
         },
         "filter": ["==", "modelId", 1],
       });
+
+      self.mainMap.on('click', 'circles1', function (e) {      
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = '<h1>'+ e.features[0].properties.description + '</h1><h2>' + e.features[0].properties.region + '</h2><a href="' + e.features[0].properties.link + '"><img src="' + e.features[0].properties.image + '"></a>';
+  
+        new mapboxgl.Popup({className: 'map-popup'})
+        .setLngLat(coordinates)
+        .setHTML(description)
+        .addTo(self.mainMap);
+      });
+
+      self.mainMap.on('mouseenter', 'circles1', function () {
+        self.mainMap.getCanvas().style.cursor = 'pointer';
+      });
+       
+      self.mainMap.on('mouseleave', 'circles1', function () {
+        self.mainMap.getCanvas().style.cursor = '';
+      });
     },
 
     buildMainMap(){
@@ -88,8 +110,18 @@ define([
         attributionControl: false
       });
 
+      this.mainMap.addControl(new mapboxgl.NavigationControl({showCompass: false}), 'bottom-left');
 
-      this.mainMap.addControl(new mapboxgl.NavigationControl(), 'bottom-left');
+      $('#map-key-ctrl').click(function(evt){
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')) {
+          $('#map-key').show();
+        }
+        else {
+          $('#map-key').hide();
+        }
+      });
     },
 
     buildMiniMap(){

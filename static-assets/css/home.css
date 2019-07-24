@@ -1,6 +1,6 @@
 /* PREROLL VIEW */
 /******************************************/
-#preroll-view {
+#preroll-view {  
   position: fixed;
   top: 0;
   left: 0;
@@ -197,7 +197,7 @@
 }
 
 #what-we-do-view td h1 {
-  border-top: 1px solid #979BA0;  
+  border-top: 2px solid #979BA0;  
   padding: 8px 0 10px 0;
   font-size: 1.25em;
 }
