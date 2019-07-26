@@ -25,6 +25,8 @@ $databaseConfig = array(
 );
 */
 
+HtmlEditorConfig::get('cms')->setOption('theme_advanced_styles', 'Footnote=footnote');
+
 FulltextSearchable::enable();
 
 // Set the site locale

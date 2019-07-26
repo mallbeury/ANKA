@@ -210,9 +210,34 @@
   margin: 0 10px;
 }
 
-#browse-view img {
+#browse-view .image-holder {
+  position: relative;
   margin-bottom: 4px;
+}
+
+#browse-view .image-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #F0A693;
+  background-blend-mode: multiply;  
+}
+
+#browse-view img {
   max-width: 100%;
+}
+
+#browse-view a:hover .image-overlay {
+  display: block;
+}
+
+#browse-view a:hover h1,
+#browse-view a:hover h2 {
+  opacity: 0.6;
 }
 
 /* MAP */

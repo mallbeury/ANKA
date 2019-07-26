@@ -1,3 +1,7 @@
+.image-mask {
+  display: none;
+}
+
 /* INTRO VIEW */
 /******************************************/
 #intro-view .text {
@@ -81,6 +85,15 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .image-nomask {
+    display: none;  
+  }
+
+  .image-mask {
+    display: block;
+    height: 640px;
+  }
+
   #journal-view h1 {
     font-size: 1.7em;
   }

@@ -251,14 +251,14 @@ form input {
 #search-view .close-btn {
   position: absolute;
   top: 16px;
-  right: 28px;
+  right: 15px;
 }
 
 #acknowledge-view {
   width: 100%;
   height: 0;
-  font-size: 0.9em;
-  line-height: 1em;
+  font-size: 0.8em;
+  line-height: 1.1em;
   color: #000;
   background: #F26A61;
   transition: all .6s cubic-bezier(.23,1,.32,1);
@@ -268,13 +268,17 @@ form input {
 }
 
 #acknowledge-view .text {
-  padding: 8px 30px 8px 15px;
+  height: 100%;
+  padding: 0 30px 0 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #acknowledge-view .close-btn {
   position: absolute;
   top: 16px;
-  right: 28px;
+  right: 15px;
 }
 
 #menu-view {
@@ -643,8 +647,12 @@ footer .credit-view {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #acknowledge-view .text {
-    padding: 15px 30px 15px 15px;
+  #acknowledge-view .close-btn {
+    right: 28px;
+  }
+
+  #search-view .close-btn {
+    right: 28px;
   }
 
   #menu-view {

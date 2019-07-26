@@ -39,7 +39,7 @@ define([
       });
     },
     
-    render: function(){
+    render: function(){      
       if (!this.result) {
         return;
       }
