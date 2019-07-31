@@ -1,0 +1,115 @@
+#content-view {
+  padding-bottom: 74px;
+}
+
+#intro-view h1 {
+  padding-bottom: 6px;
+}
+
+#video-view .row {
+}
+
+#video-view div[class|='col'] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#video-view .fullwidth div[class|='col'] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#video-view h1 {
+  padding: 10px 0 12px 0;
+  font-size: 1.6em;
+  line-height: 1.1em;
+}
+
+#video-view p {
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+
+#video-view .video-container {
+  padding-top: 42px;
+}
+
+#video-view .video-container .video-player-container {
+  position: relative;
+  width: 100%;
+}
+
+#video-view .video-container .video-player-container .nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#video-view .video-container .play-btn {
+  position: relative;
+  top: 50%;
+  margin: -39px auto 0 auto; 
+  width: 78px;
+  height: 78px;
+  border: 2px solid #fff;
+  overflow: hidden;
+  border-radius: 50%;  
+}
+
+#video-view .video-container .play-btn:hover {
+  cursor: pointer;
+}
+
+#video-view .video-container .play-btn .fa {
+  display: block;
+  padding-left: 6px;
+  line-height: 74px;
+  font-size: 34px;
+  text-align: center;
+  color: #fff;
+}
+
+#video-view .video-container .media-player {
+  width: 100%;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #content-view {
+    padding-bottom: 154px;
+  }
+
+  #video-view h1 {
+    font-size: 2.3em;
+  }
+
+  #video-view p {
+    font-size: 1.4em;
+    line-height: 1.2em;
+  }
+
+  #video-view .video-container {
+    padding-top: 58px;
+  }
+
+  #video-view .fullwidth h1 {
+    padding-top: 58px;
+  }
+
+  #video-view .video-left .video-container {
+    padding-left: 20px;
+  }
+
+  #video-view .video-right .video-container {
+    padding-right: 20px;
+  }
+}
+
+/* Small devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

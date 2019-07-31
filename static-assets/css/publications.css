@@ -7,7 +7,7 @@
 
 #publications-view h1 {
   font-size: 1.8em;
-  padding: 14px 0 52px 0;
+  padding: 14px 0 30px 0;
   border-top: 2px solid #000;
 }
 
@@ -24,6 +24,10 @@
   margin: 26px 0 0 0;
   padding: 8px 0 64px 0;
   border-top: 2px solid #000;
+}
+
+#publications-view li .publication-download h2 {
+  display: inline;
 }
 
 #publications-view li .publication-download .details {
@@ -46,6 +50,10 @@
   text-align: right;
 }
 
+#publications-view li .publication-download .description {
+  margin-top: 12px;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #publications-view ul {
@@ -58,6 +66,10 @@
     padding: 0 10px 0 10px;
     width: 50%;
   }  
+
+  #publications-view li .publication-download .description {
+    margin-top: 30px;
+  }
 }
 
 /* Small devices (tablets, 992px and up) */

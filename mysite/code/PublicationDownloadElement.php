@@ -2,7 +2,8 @@
 class PublicationDownloadElement extends DataObject {
   private static $db = array(
     'Name' => 'Varchar',
-    'SortID'=>'Int'
+    'SortID'=>'Int',
+    'Description' => 'HTMLText',
   );
 
   private static $has_one = array(
@@ -33,6 +34,7 @@ class PublicationDownloadElement extends DataObject {
 
     $fields = new FieldList (
       new TextField('Name', 'Name'),
+      new TextareaField('Description', 'Description'),
       $uploadField,
       $uploadFieldPDF
     );

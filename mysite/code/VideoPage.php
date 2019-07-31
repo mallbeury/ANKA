@@ -1,5 +1,5 @@
 <?php
-class PublicationsPage extends Page {
+class VideoPage extends Page {
 
   private static $db = array(
     'TitleTextFormatted' => 'Text',
@@ -7,7 +7,7 @@ class PublicationsPage extends Page {
   );
 
   private static $has_many = array(
-    'PublicationDownloadElements' => 'PublicationDownloadElement'
+    'VideoElements' => 'VideoElement'
   );
 
   private static $has_one = array(
@@ -16,27 +16,29 @@ class PublicationsPage extends Page {
   function getCMSFields() {
     $fields = parent::getCMSFields();
 
+    // remove fields
+    $fields->removeFieldFromTab('Root.Main', 'Content');
+
     $fields->addFieldToTab('Root.Main', new TextareaField('TitleTextFormatted', 'Formatted Title'), 'Content');
-    $fields->addFieldToTab('Root.Main', new TextField('SubTitleText', 'Subtitle'), 'Content');
 
     $config = GridFieldConfig_RelationEditor::create();
     $config->removeComponentsByType('GridFieldPaginator');
     $config->removeComponentsByType('GridFieldPageCount');
     $config->addComponent(new GridFieldSortableRows('SortID'));
 
-    $publicationElementField = new GridField(
-      'PublicationDownloadElements', // Field name
-      'Publication Download Element', // Field title
-      $this->PublicationDownloadElements(),
+    $videoElementField = new GridField(
+      'VideoElements', // Field name
+      'Video Element', // Field title
+      $this->VideoElements(),
       $config
     );
-    $fields->addFieldToTab('Root.Main', $publicationElementField); 
+    $fields->addFieldToTab('Root.Main', $videoElementField); 
 
     return $fields;
   }
 
 }
-class PublicationsPage_Controller extends Page_Controller {
+class VideoPage_Controller extends Page_Controller {
   private static $allowed_actions = array (
   );
 

@@ -33,6 +33,28 @@ define([
         }
       });
     }
+
+    // do we want video?
+    if ($('#video-view').length) {
+      $('.video-player-container .play-btn').click(function(evt){
+        // stop any playing videos
+        $('video').each(function(index, value){
+          this.pause();
+
+          var elVideoContainer = $(this).closest('.video-container');
+          $('.play-btn', elVideoContainer).show();
+        });
+
+        // find video to play
+        $(this).hide();
+
+        var elVideoContainer = $(this).closest('.video-container');
+        var elVideo = $('video', elVideoContainer);
+        if (elVideo.length) {
+          elVideo[0].play();
+        }
+      });
+    }
     
     // do we want macy?
     if ($('#macy-container').length) {
