@@ -3,6 +3,7 @@ class ArtCentrePage extends Page {
 
   private static $db = array(
     'TitleTextFormatted' => 'Text',
+    'Synopsis' => 'Text',
     'MainImageCredit' => 'Text', 
     'LocationLat' => 'Text',
     'LocationLng' => 'Text',
@@ -31,6 +32,8 @@ class ArtCentrePage extends Page {
     $fields = parent::getCMSFields();
 
     $fields->addFieldToTab('Root.Main', new TextareaField('TitleTextFormatted', 'Formatted Title'), 'Content');
+
+    $fields->addFieldToTab('Root.Main', new TextareaField('Synopsis', 'Synopsis'), 'Content');
 
     $uploadField1 = new UploadField($name = 'MainImage', $title = 'Main Image');
     $uploadField1->setCanUpload(false);

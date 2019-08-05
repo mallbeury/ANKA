@@ -1,13 +1,14 @@
 <?php
 class VideoElement extends DataObject {
   private static $db = array(
-    'Name' => 'Varchar',
+    'Name' => 'Text',
     'SortID'=>'Int',
     'Description' => 'HTMLText',
     'VideoSize'=>'Int'
   );
 
   private static $has_one = array(
+    'VideoImage' => 'Image', 
     'VideoFile' => 'File', 
     'Page' => 'VideoPage'
   );    
@@ -30,9 +31,13 @@ class VideoElement extends DataObject {
     $uploadFieldVideo->setAllowedExtensions(array('m4v'));
     $uploadFieldVideo->setCanUpload(false);
 
+    $uploadImageField = new UploadField($name = 'VideoImage', $title = 'Poster Image');
+    $uploadImageField->setCanUpload(false);
+
     $fields = new FieldList (
       new TextField('Name', 'Name'),
       new TextareaField('Description', 'Description'),
+      $uploadImageField,
       $uploadFieldVideo,
       $videoSizeField
     );

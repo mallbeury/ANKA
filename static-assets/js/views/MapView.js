@@ -49,7 +49,8 @@ define([
             "description": item.title,
             "region": item.title_parent,
             "image": item.image,
-            "link": item.link
+            "link": item.link,
+            "synopsis": item.synopsis
           }              
         };
         geojson.data.features.push(jsonFeature);
@@ -81,7 +82,7 @@ define([
 
       self.mainMap.on('click', 'circles1', function (e) {      
         var coordinates = e.features[0].geometry.coordinates.slice();
-        var description = '<h1>'+ e.features[0].properties.description + '</h1><h2>' + e.features[0].properties.region + '</h2><a href="' + e.features[0].properties.link + '"><img src="' + e.features[0].properties.image + '"></a>';
+        var description = '<h1>'+ e.features[0].properties.description + '</h1><h2>' + e.features[0].properties.region + '</h2><a href="' + e.features[0].properties.link + '"><img src="' + e.features[0].properties.image + '"><p>' + e.features[0].properties.synopsis + '</p></a>';
   
         new mapboxgl.Popup({className: 'map-popup'})
         .setLngLat(coordinates)

@@ -267,13 +267,37 @@
   border-radius: 0;
 }
 
+.map-popup .mapboxgl-popup-content {
+  padding: 15px;
+}
+
+.map-popup h1 {
+  font-size: 1.15em;
+}
+
 .map-popup h2 {
+  font-size: 1.15em;
   padding: 0 0 8px 0;
   color: #979BA0;  
 }
 
 .map-popup img {
   width: 100%;
+}
+
+.map-popup p {
+  padding-top: 8px;
+  line-height: 1.2em;
+}
+
+.mapboxgl-popup-close-button {
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+}
+
+.mapboxgl-popup-close-button:hover {
+  background: transparent;
 }
 
 /* MAP VIEW */
