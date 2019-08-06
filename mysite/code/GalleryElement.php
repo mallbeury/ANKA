@@ -1,7 +1,7 @@
 <?php
 class GalleryElement extends DataObject {
   private static $db = array(
-    'Name' => 'Varchar',
+    'Name' => 'Text',
     'SortID'=>'Int',
     'HeroImageCredit' => 'Text',
     'ImageSize'=>'Int'

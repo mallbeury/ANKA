@@ -7,6 +7,7 @@ define([
   var MapView = Backbone.View.extend({
     initialize: function(options){
       this.template = _.template($('#mapViewTemplate').text());
+      this.popupTemplate = _.template($('#mapViewPopupTemplate').text());
 
       this.options = options;
 
@@ -81,12 +82,12 @@ define([
       });
 
       self.mainMap.on('click', 'circles1', function (e) {      
+        var strHTML = self.popupTemplate({data: e.features[0].properties});
         var coordinates = e.features[0].geometry.coordinates.slice();
-        var description = '<h1>'+ e.features[0].properties.description + '</h1><h2>' + e.features[0].properties.region + '</h2><a href="' + e.features[0].properties.link + '"><img src="' + e.features[0].properties.image + '"><p>' + e.features[0].properties.synopsis + '</p></a>';
   
         new mapboxgl.Popup({className: 'map-popup'})
         .setLngLat(coordinates)
-        .setHTML(description)
+        .setHTML(strHTML)
         .addTo(self.mainMap);
       });
 

@@ -1,8 +1,8 @@
 <?php
 class ArtCentrePhotoElement extends DataObject {
   private static $db = array(
-    'Name' => 'Varchar',
-    'Title' => 'Varchar',
+    'Name' => 'Text',
+    'Title' => 'Text',
     'SortID'=>'Int'
   );
 

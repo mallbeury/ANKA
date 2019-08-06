@@ -1,7 +1,7 @@
 <?php
 class PublicationDownloadElement extends DataObject {
   private static $db = array(
-    'Name' => 'Varchar',
+    'Name' => 'Text',
     'SortID'=>'Int',
     'Description' => 'HTMLText',
   );

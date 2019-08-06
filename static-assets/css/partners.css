@@ -4,6 +4,9 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  #about-view td {
+    width: 25%;
+  }
 }
 
 /* Small devices (tablets, 992px and up) */

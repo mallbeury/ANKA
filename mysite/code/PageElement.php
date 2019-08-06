@@ -1,7 +1,7 @@
 <?php
 class PageElement extends DataObject {
   private static $db = array(
-    'Name' => 'Varchar',
+    'Name' => 'Text',
     'SortID'=>'Int',
     'Content' => 'HTMLText',
     'QuoteCredit' => 'Text',

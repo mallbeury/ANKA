@@ -28,7 +28,7 @@ class VideoElement extends DataObject {
     );    
 
     $uploadFieldVideo = new UploadField('VideoFile', 'Video');
-    $uploadFieldVideo->setAllowedExtensions(array('m4v'));
+    $uploadFieldVideo->setAllowedExtensions(array('m4v', 'mp4'));
     $uploadFieldVideo->setCanUpload(false);
 
     $uploadImageField = new UploadField($name = 'VideoImage', $title = 'Poster Image');
