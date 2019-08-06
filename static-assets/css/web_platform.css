@@ -449,6 +449,65 @@ form input {
   border-top: 2px solid #000;
 }
 
+/* VIDEO */
+/******************************************/
+.video-js {
+  background: transparent;
+  padding-top:56.25%;
+}
+
+.video-js.fix-square {
+  padding-top:90%;
+}
+
+.video-js.vjs-fullscreen {
+  padding-top:0px !important;
+}
+
+.vjs-poster {
+  display: none;
+  background: transparent;
+}
+
+.vjs-default-skin .vjs-play-progress,
+.vjs-default-skin .vjs-volume-level {
+  background: #F26A61;
+}
+
+.vjs-default-skin .vjs-big-play-button {
+  top: 50%;
+  left: 50%;
+  margin: -22px 0 0 -22px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: transparent;
+  border: .1em solid #FFF;
+}
+
+.vjs-default-skin .vjs-big-play-button:before {
+  font-family: FontAwesome !important;
+  content: "\f04b" !important;
+  color: #FFFFFF;
+  font-size: 0.8em;
+  line-height: 0.8em;
+  text-shadow: none;
+  text-align: center;
+  margin-top: 9px;
+  margin-left: 2px;
+}
+
+.vjs-default-skin:hover .vjs-big-play-button, .vjs-default-skin .vjs-big-play-button:focus {
+  outline: 0;
+  border-color: none;
+  background-color: #505050;
+  box-shadow: none;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
 /* FOOTER */
 /******************************************/
 footer {

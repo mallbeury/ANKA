@@ -9,9 +9,10 @@ define([
   'visible',
   'macy',
   'imageScale',
+  'videojs',
   'views/MapView',
   'views/BrowseSlickView'
-], function(_, Backbone, bootstrap, modernizr, cookie, visible, Macy, imageScale, MapView, BrowseSlickView){
+], function(_, Backbone, bootstrap, modernizr, cookie, visible, Macy, imageScale, videojs, MapView, BrowseSlickView){
   app.dispatcher = _.clone(Backbone.Events);
 
   _.templateSettings = {
@@ -36,6 +37,14 @@ define([
 
     // do we want video?
     if ($('#video-view').length) {
+
+      $('.media-player').each(function(){
+        var objMedia = videojs($(this).attr('id'));
+        objMedia.src($(this).attr('url'));
+        objMedia.load();
+      });
+
+/*      
       $('.video-player-container .play-btn').click(function(evt){
         // stop any playing videos
         $('video').each(function(index, value){
@@ -54,6 +63,7 @@ define([
           elVideo[0].play();
         }
       });
+*/      
     }
     
     // do we want macy?

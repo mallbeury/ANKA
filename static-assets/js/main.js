@@ -13,6 +13,7 @@ require.config({
     modernizr: 'libs/modernizr-custom',
     imageScale: 'libs/image-scale.min',
     imagesLoaded: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min',
+    videojs: '//vjs.zencdn.net/4.12/video',
     cookie: 'libs/js.cookie',
     visible: 'libs/jquery.visible.min',
     macy: 'libs/macy',
