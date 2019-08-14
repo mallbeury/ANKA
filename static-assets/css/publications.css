@@ -6,6 +6,7 @@
 }
 
 #publications-view h1 {
+  font-weight: 800; /* ExtraBold */
   font-size: 1.8em;
   padding: 14px 0 30px 0;
   border-top: 2px solid #000;
@@ -28,6 +29,8 @@
 
 #publications-view li .publication-download h2 {
   display: inline;
+  font-family: 'helvetica';
+  font-weight: bold;
 }
 
 #publications-view li .publication-download .details {
@@ -56,6 +59,10 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  #publications-view h1 {
+    font-size: 2.2em;
+  }  
+
   #publications-view ul {
     display: flex;
     flex-wrap: wrap;

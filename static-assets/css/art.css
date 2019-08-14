@@ -34,7 +34,7 @@
 #about-view th {
   padding: 8px 0 12px 0;
   font-size: 1.6em;
-  font-weight: normal;
+  font-weight: 700; /* Bold */
 }
 
 #about-view tr {
@@ -65,6 +65,7 @@
 }
 
 #journal-view h1 {
+  font-weight: 700; /* Bold */
   padding: 16px 0 46px 0;
   border-top: 2px solid #000;
   font-size: 1.6em;
@@ -77,6 +78,7 @@
 }
 
 #journal-view .journal-post h1 {
+  font-family: 'helvetica';
   padding: 4px 0;
   border: none;
   font-size: 1em;

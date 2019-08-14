@@ -8,6 +8,7 @@ class ArtCentrePage extends Page {
     'LocationLat' => 'Text',
     'LocationLng' => 'Text',
     'ContactWebsite' => 'Varchar',
+    'ContactWebsiteURL' => 'Varchar',
     'ContactAddress' => 'Text',
     'ContactPhone' => 'Varchar',
     'ContactEmail' => 'Varchar',
@@ -46,6 +47,7 @@ class ArtCentrePage extends Page {
 
     // contact
     $fields->addFieldToTab('Root.Contact', new TextField('ContactWebsite', 'Website'));  
+    $fields->addFieldToTab('Root.Contact', new TextField('ContactWebsiteURL', 'Website URL'));  
     $fields->addFieldToTab('Root.Contact', new TextareaField('ContactAddress', 'Address'));
     $fields->addFieldToTab('Root.Contact', new TextField('ContactPhone', 'Phone'));  
     $fields->addFieldToTab('Root.Contact', new TextField('ContactEmail', 'Email'));  

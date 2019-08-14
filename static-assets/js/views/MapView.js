@@ -113,6 +113,7 @@ define([
       });
 
       this.mainMap.addControl(new mapboxgl.NavigationControl({showCompass: false}), 'bottom-left');
+      this.mainMap.addControl(new mapboxgl.FullscreenControl({}), 'top-left');
 
       $('#map-key-ctrl').click(function(evt){
         $(this).toggleClass('active');

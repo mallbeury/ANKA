@@ -19,6 +19,7 @@
 }
 
 #intro-view h1 {
+  font-weight: 800; /* ExtraBold */
   padding: 16px 0 46px 0;
   font-size: 3.2em;
   line-height: 1.1em;
@@ -47,6 +48,7 @@
 }
 
 #about-view h1 {
+  font-weight: 700; /* Bold */
   padding: 8px 0 14px 0;
   font-size: 1.6em;
 }
@@ -77,6 +79,8 @@
 #about-view .vision {
   font-size: 1.8em;
   color: #F26A61;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900; /* black */
 }
 
 #about-view ul {
@@ -137,7 +141,7 @@
 /******************************************/
 #gallery-view {
   margin-top: 46px;
-  margin-bottom: 46px;
+  margin-bottom: 76px;
 }
 
 #gallery-view .image {
@@ -164,6 +168,13 @@
 #browse-view .browse-container-view .title {
   position: absolute;
   top: -36px;
+  font-weight: bold;
+}
+
+#browse-view h1, 
+#browse-view h2 {
+  font-family: 'helvetica';
+  font-weight: bold;  
 }
 
 #browse-view h1 {
@@ -183,9 +194,19 @@
   padding: 0 16px 16px 0;
   text-align: right;
   color: #979BA0;
+  font-weight: bold;
+}
+
+#browse-view .nav-view a,
+#browse-view .nav-view a:hover,
+#browse-view .nav-view a:active,
+#browse-view .nav-view a:visited {
+  color: inherit;
+  text-decoration: none;
 }
 
 #browse-view .nav-view a:hover {
+  color: inherit;
   opacity: 0.6;
 }
 
@@ -204,6 +225,14 @@
 #browse-view .nav-view span:hover path,
 #browse-view .nav-view span:hover polyline {
   opacity: 0.6;
+}
+
+#browse-view a,
+#browse-view a:hover,
+#browse-view a:active,
+#browse-view a:visited {
+  color: inherit;
+  text-decoration: none;
 }
 
 #browse-view .slick-slide {
@@ -242,13 +271,21 @@
 
 /* MAP */
 /******************************************/
+.mapboxgl-ctrl-top-left {
+  top: 16px;
+  left: 16px;
+}
+
 .mapboxgl-ctrl-bottom-left {
   bottom: 16px;
   left: 16px;
 }
 
-.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl {
-  margin: 0;
+.mapboxgl-ctrl,
+.mapboxgl-ctrl-group {
+  margin: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
 .mapboxgl-ctrl-logo {
@@ -291,6 +328,10 @@
   line-height: 1.15em;
 }
 
+.map-popup .popup-title {
+  padding-right: 20px;
+}
+
 .mapboxgl-popup-close-button {
   top: 10px;
   right: 10px;
@@ -312,6 +353,7 @@
 }
 
 #map-view .title h1 {
+  font-weight: 800; /* ExtraBold */
   color: #000;
   font-size: 1.8em;
   line-height: 1.1em;
@@ -358,7 +400,6 @@
 
 #map-view #map-key-ctrl .key-close {
   display: none;
-  font-size: 2em;
 }
 
 #map-view #map-key-ctrl.active .key {
@@ -367,6 +408,17 @@
 
 #map-view #map-key-ctrl.active .key-close {
   display: inline-block;
+  padding-top: 5px;
+}
+
+#map-view #map-key-ctrl svg {
+  width: 20px;
+  height: 20px;
+}
+
+#map-view #map-key-ctrl path,
+#map-view #map-key-ctrl polyline {
+  stroke: #FFF;
 }
 
 #map-view #map-key {
@@ -400,9 +452,8 @@
 }
 
 #map-view #map-key h1 {
-  position: relative;
-  top: -4px;
   display: inline-block;
+  vertical-align: top;  
   font-size: 1.1em;
 }
 
@@ -418,6 +469,7 @@
   border-top: 2px solid #000;
   font-size: 1.6em;
   line-height: 1.1em;
+  font-weight: 700; /* Bold */
 }
 
 #downloads-view ul {
@@ -436,6 +488,7 @@
 
 #downloads-view li .download {
   font-size: 1.1em;
+  font-weight: bold;
 }
 
 #downloads-view li .size {
@@ -471,7 +524,7 @@
   }
 
   #about-view h1 {
-    font-size: 1.8em;
+    font-size: 2.2em;
   }
 
   #about-view p,
@@ -494,6 +547,7 @@
 
   #about-view .vision {
     font-size: 3.7em;
+    line-height: 1.1em;
   }
 
   #about-view .footnote {

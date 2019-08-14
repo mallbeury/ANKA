@@ -78,6 +78,7 @@
 }
 
 #hero-view .title h1 {
+  font-weight: 900; /* black */
   color: #FFF;
   font-size: 3.4em;
   line-height: 1.1em;
@@ -100,10 +101,18 @@
   background: #F26A61;
 }
 
+#message-view .title {
+  font-weight: 800; /* ExtraBold */
+}
+
 /* MAP VIEW */
 /******************************************/
 #map-view .title {
   padding-top: 64px;
+}
+
+#map-view .title h1 {
+  font-weight: 800; /* ExtraBold */
 }
 
 #browse-view {
@@ -138,6 +147,7 @@
 }
 
 #who-we-are-view h1 {
+  font-weight: 800; /* ExtraBold */
   padding: 0 0 32px 0;
   font-size: 3em;
   line-height: 1.1em;
@@ -174,6 +184,7 @@
 }
 
 #what-we-do-view h1 {
+  font-weight: 900; /* black */
   padding: 0 0 32px 0;
   font-size: 5.2em;
   line-height: 1.1em;
@@ -257,8 +268,9 @@
 }
 
 #featured-projects-view h1 {
+  font-weight: 800; /* ExtraBold */
   padding: 0 0 32px 0;
-  font-size: 2.6em;
+  font-size: 2.4em;
   line-height: 1.1em;
 }
 
@@ -308,6 +320,7 @@
 }
 
 #keep-up-view h1 {
+  font-weight: 900; /* Black */
   padding: 0 0 44px 0;
   font-size: 5.2em;
   line-height: 1.1em;
@@ -349,6 +362,7 @@
 }
 
 #help-us-view h1 {
+  font-weight: 900; /* Black */
   padding: 0 0 44px 0;
   font-size: 5.2em;
   line-height: 1.1em;
@@ -593,7 +607,7 @@
   }
 
   #help-us-view .text {  
-    padding: 90px 144px 0 0;
+    padding: 90px 14px 0 0;
   }
 }
 
