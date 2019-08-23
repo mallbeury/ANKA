@@ -100,7 +100,7 @@ class HomePage extends Page {
 
     // video
     $uploadFieldVideo = new UploadField('HeroVideoFile', 'Hero Video');
-    $uploadFieldVideo->setAllowedExtensions(array('m4v'));
+    $uploadFieldVideo->setAllowedExtensions(array('m4v', 'mp4'));
     $uploadFieldVideo->setCanUpload(false);
 
     $fields->addFieldToTab('Root.Video', $uploadFieldVideo);

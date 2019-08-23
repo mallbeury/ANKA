@@ -18,6 +18,8 @@ define([
   };
 
   var initialize = function() {
+    $('.loader-view').show();
+
     $(window).resize(function() {
       handleResize();
     });
@@ -39,6 +41,7 @@ define([
     });
 
     function onSocialFeedReady() {
+      $('.loader-view').hide();
       socialFeedView.render();
     }
   };

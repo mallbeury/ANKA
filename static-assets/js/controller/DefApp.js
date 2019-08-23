@@ -23,6 +23,7 @@ define([
 
   var initialize = function() {
     var mapView = null;
+    var nActiveProfileID = 0;
 
     function checkInView() {
       var bVisible = false;
@@ -43,27 +44,6 @@ define([
         objMedia.src($(this).attr('url'));
         objMedia.load();
       });
-
-/*      
-      $('.video-player-container .play-btn').click(function(evt){
-        // stop any playing videos
-        $('video').each(function(index, value){
-          this.pause();
-
-          var elVideoContainer = $(this).closest('.video-container');
-          $('.play-btn', elVideoContainer).show();
-        });
-
-        // find video to play
-        $(this).hide();
-
-        var elVideoContainer = $(this).closest('.video-container');
-        var elVideo = $('video', elVideoContainer);
-        if (elVideo.length) {
-          elVideo[0].play();
-        }
-      });
-*/      
     }
     
     // do we want macy?
@@ -100,6 +80,42 @@ define([
       $('#browse-view').show();
       var browseSlickView = new BrowseSlickView({ el: '#browse-slick-view' });
     }
+
+    // do we have profiles?
+    $('.profiles-container .image, .profiles-container .name').click(function(evt){
+      // hide any already open
+      $('.profile-info-container').hide();
+      $('.profile').removeClass('active');
+
+      var elElement = $(this).parents('.profile');
+
+      // Don't show if ID hasn't changed
+      if (elElement.attr('data-id') == nActiveProfileID) {
+        nActiveProfileID = 0;
+        return;
+      }
+
+      elElement.addClass('active');
+      nActiveProfileID = elElement.attr('data-id');
+
+      var strContent = $('.content', elElement).html();
+
+      // show personal info
+      $('.profile-info-container', elElement).fadeIn();
+
+      // show shared info (next sibling)
+      var elSharedInfo = $(elElement).nextAll('.shared-info').eq(0);
+
+      elSharedInfo.removeClass('left-align');
+      elSharedInfo.removeClass('middle-align');
+      elSharedInfo.removeClass('right-align');
+
+      elSharedInfo.addClass(elElement.attr('data-align')+'-align');
+
+      $('.content', elSharedInfo).html(strContent);
+
+      elSharedInfo.fadeIn();
+    });
 
     $('#signup').submit(function(evt){
       evt.preventDefault();

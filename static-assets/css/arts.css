@@ -8,10 +8,12 @@
 
 #art-centres-nav-view .title {
   display: inline-block;
+  font-weight: bold;
 }
 
 #art-centres-nav-view .filters {
   float: right;
+  font-weight: bold;
 }
 
 #art-centres-nav-view .filters li {
@@ -102,8 +104,8 @@
   opacity: 1;
 }
 
-#art-centre-index-view h1, 
-#art-centre-index-view h2 {
+#art-centre-index-view li h1, 
+#art-centre-index-view li h2 {
   font-family: 'helvetica';
   font-weight: bold;  
 }

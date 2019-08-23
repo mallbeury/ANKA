@@ -23,6 +23,7 @@
   padding: 10px 0 12px 0;
   font-size: 1.6em;
   line-height: 1.1em;
+  font-weight: 700; /* Bold */  
 }
 
 #video-view p {
@@ -50,7 +51,7 @@
   }
 
   #video-view h1 {
-    font-size: 2.3em;
+    font-size: 2.2em;
   }
 
   #video-view p {

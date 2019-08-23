@@ -32,8 +32,10 @@
 }
 
 #about-view th {
-  padding: 8px 0 12px 0;
+  font-family: 'Work Sans', sans-serif;
+  padding: 8px 0 16px 0;
   font-size: 1.6em;
+  line-height: 1.3em;
   font-weight: 700; /* Bold */
 }
 
@@ -47,6 +49,10 @@
   padding: 8px 0;
   border-top: 2px solid #000;
   vertical-align: top;
+}
+
+#about-view td.title {
+  font-weight: bold;
 }
 
 #about-view td:first-child {
@@ -87,6 +93,10 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  #about-view th {
+    font-size: 2.2em;
+  }
+
   .image-nomask {
     display: none;  
   }
@@ -97,7 +107,7 @@
   }
 
   #journal-view h1 {
-    font-size: 1.7em;
+    font-size: 2.2em;
   }
 }
 

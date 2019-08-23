@@ -76,6 +76,8 @@
 
   #publications-view li .publication-download .description {
     margin-top: 30px;
+    font-size: 1.4em;
+    line-height: 1.2em;
   }
 }
 

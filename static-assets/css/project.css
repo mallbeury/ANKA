@@ -14,6 +14,7 @@
   border-top: 2px solid #000;
   font-size: 1.6em;
   line-height: 1.1em;
+  font-weight: 700; /* Bold */
 }
 
 #projects-view ul {
@@ -35,14 +36,29 @@
 #projects-view ul li h1 {
   border: none;
   padding: 4px 0;
+  font-family: 'helvetica';
+  font-weight: bold;    
   font-size: 1em;
   line-height: 1.3em;
 }
+
+#projects-view a,
+#projects-view a:hover,
+#projects-view a:active,
+#projects-view a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #projects-view li {
     width: 50%;
+  }
+
+  #projects-view h1 {
+    font-size: 2.2em;
   }
 
   #image-view .image.format-left {

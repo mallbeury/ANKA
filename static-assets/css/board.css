@@ -1,0 +1,163 @@
+#content-view {
+  padding-bottom: 40px;
+}
+
+.profiles-view p {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+.profiles-view h2 {
+  color: #F26A61;
+}
+
+.profiles-view h3 {
+  color: #979BA0;
+}
+
+/* PROFILES */
+/******************************************/
+.profiles-container {
+  margin: 0 -10px;
+}
+
+.profiles-container .name {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  height: 84px;
+}
+
+.profiles-container .name .highlight {
+  text-decoration-color: #000;
+  -webkit-text-decoration-color: #000;
+}
+
+.profiles-container .padding {
+  padding: 0 10px;
+}
+.profiles-container .padding.no-top-padding {
+  padding-top: 0px;
+}
+
+.profile-info-container {
+  display: none;
+}
+
+.profile-info {
+  margin-top: 32px;
+  margin-bottom: 56px;
+  position: relative;
+  padding: 0;
+  color: #000;
+}
+
+.profile-info h1, 
+.profile-info h2, 
+.profile-info h3 {
+  font-weight: 700; /* Bold */
+  font-size: 1.6em;
+}
+
+.profile-info .titles {
+  padding-bottom: 22px;
+}
+
+.profiles-container .image {
+  position: relative;
+}
+
+.profiles-container .image img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.profiles-container .overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.profiles-container .image:hover .overlay {
+  display: block;
+}
+
+.profiles-container .image:hover,
+.profiles-container .name:hover {
+  cursor: pointer;
+}
+
+.profiles-container .profile.active .image img,
+.profiles-container .image:hover img {
+  -webkit-filter: none; /* Safari 6.0 - 9.0 */
+  filter: none;
+}
+
+.profile-info table {
+  padding: 38px 0 0 0;
+  width: 100%;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.profile-info th {
+  font-family: 'Work Sans', sans-serif;
+  padding: 8px 0 16px 0;
+  font-size: 1.6em;
+  line-height: 1.3em;
+  font-weight: 700; /* Bold */
+}
+
+.profile-info tr {
+  display: table-row;
+  margin: initial;
+}
+
+.profile-info td {
+  width: 50%;
+  padding: 8px 0;
+  border-top: 2px solid #000;
+  vertical-align: top;
+}
+
+.profile-info td.title {
+  font-weight: bold;
+}
+
+.profile-info td:first-child {
+  width: 30%;
+}
+
+.profile-info td:nth-child(4n) {
+  width: 70%;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .profiles-view table {
+    width: 66.6666%;
+  }
+
+  .profiles-view p {
+    font-size: 1.8em;
+    width: 66.6666%;
+  }
+
+  .profile-info .titles {
+    padding-bottom: 92px;
+  }
+
+  .profile-info h1, 
+  .profile-info h2, 
+  .profile-info h3 {
+    font-size: 2.2em;
+  }
+}
+
+/* Small devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

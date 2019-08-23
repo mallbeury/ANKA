@@ -1,3 +1,7 @@
+p.nav {
+  font-weight: bold;
+}
+
 /* PREROLL VIEW */
 /******************************************/
 #preroll-view {    
@@ -102,6 +106,7 @@
 }
 
 #message-view .title {
+  font-family: 'Work Sans', sans-serif;
   font-weight: 800; /* ExtraBold */
 }
 
@@ -154,6 +159,7 @@
 }
 
 #who-we-are-view p {
+  font-weight: bold;
   font-size: 1.4em;
   line-height: 1.2em;
 }
@@ -557,6 +563,11 @@
     width: 640px;
   }
 
+  #who-we-are-view h1 {
+    font-size: 4.4em;
+    line-height: 1em;
+  }
+
   #who-we-are-view .text {  
     padding-top: 30px;
     padding-right: 104px;
@@ -564,6 +575,11 @@
 
   #who-we-are-view .image {  
     padding: 0;
+  }
+
+  #what-we-do-view h1 {
+    font-size: 6.4em;
+    line-height: 1em;
   }
 
   #what-we-do-view .image {  
@@ -586,6 +602,11 @@
     padding: 0 104px 0 0;
   }
 
+  #keep-up-view h1 {
+    font-size: 6.4em;
+    line-height: 1em;
+  }
+
   #keep-up-view .image {  
     padding: 0;
   }
@@ -600,6 +621,11 @@
 
   #keep-up-view form .btn {
     margin-top: 14px;
+  }
+
+  #help-us-view h1 {
+    font-size: 6.4em;
+    line-height: 1em;
   }
 
   #help-us-view .image {  

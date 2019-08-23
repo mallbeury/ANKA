@@ -5,6 +5,7 @@ body {
   color: #000;
   font-size: 12.5px;
   line-height: 1.3em;  
+  letter-spacing: 0.3px;
   -webkit-appearance: none;
 }
 
@@ -12,7 +13,11 @@ body.lock {
   overflow: hidden;
 }
 
-h1, h2 {
+p {
+  margin: 0 0 1em 0;
+}
+
+h1, h2, h3 {
   font-family: 'Work Sans', sans-serif;
   font-style: normal;
   margin: 0;
@@ -52,12 +57,15 @@ li {
 
 input::placeholder {
   color: #979BA0;
+  font-weight: bold;
 }
 input:-ms-input-placeholder {
   color: #979BA0;
+  font-weight: bold;
 }
 input::-ms-input-placeholder {
   color: #979BA0;
+  font-weight: bold;
 }
 
 .link:hover {
@@ -134,7 +142,9 @@ a.more-link img {
 
 .btn {
   height: 44px;
-  line-height: 32px;
+  font-size: inherit;
+  line-height: 36px;
+  font-weight: bold;
   vertical-align: top;
   border: none;
   border-radius: 0;
@@ -208,6 +218,7 @@ form input {
   padding: 10px;
   border: 2px solid #000;
   color: #000;
+  font-weight: bold;
   background: transparent;
   border-radius: 0;
   box-shadow: none;
@@ -423,6 +434,7 @@ form input {
   vertical-align: top;
   font-size: 1.25em;
   line-height: 1.3em;
+  font-weight: bold;
 }
 
 #menu-view .big-menu-view li .title {
@@ -585,6 +597,10 @@ footer .subscribe {
   padding: 84px 0 0 0;
 }
 
+footer .subscribe .title {
+  font-weight: bold;
+}
+
 footer .subscribe form {
   padding: 24px 0 22px 0;
 }
@@ -597,6 +613,10 @@ footer .contact-view {
   padding-top: 72px;  
 }
 
+footer .contact-view .title {
+  font-weight: bold;
+}
+
 footer .address {
   padding-top: 18px;
 }
@@ -607,10 +627,15 @@ footer .contact {
 
 footer .menu {
   padding-top: 22px;
+  font-weight: bold;
 }
 
 footer .social-view {
   padding-top: 22px;
+}
+
+footer .social-view .title {
+  font-weight: bold;
 }
 
 footer .social-btns {
@@ -669,6 +694,10 @@ footer .support-view {
   padding: 86px 0 0 0;
 }
 
+footer .support-view .title {
+  font-weight: bold;
+}
+
 footer .support-view .supporter-logos {
   margin: 0 -12px;
   display: flex;
@@ -688,11 +717,16 @@ footer .support-view .supporter-logo img {
 
 footer .acknowledge-view {
   padding: 14px 0 0 0;
-  font-size: 0.8em;  
+  font-size: 0.7em;  
+  line-height: 1.4em;
 }
 
 footer .credit-view {
   padding: 94px 0 0 0;  
+}
+
+footer .credit-view .title {
+  font-weight: bold;
 }
 
 .image {
@@ -721,6 +755,19 @@ footer .credit-view {
 
 .image img {
   width: 100%;
+}
+
+/* LOADER */
+/******************************************/
+.loader-view {
+  padding-top: 36px;
+}
+
+.loader-view .spinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: 0 auto;
 }
 
 /* Small devices (tablets, 768px and up) */

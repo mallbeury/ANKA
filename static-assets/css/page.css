@@ -111,6 +111,8 @@
 }
 
 #about-view .quote {      
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 800; /* ExtraBold */
   margin: 54px 0 20px 15%;
   font-size: 1.4em;
   line-height: 1.2em;
@@ -118,7 +120,7 @@
 }
 
 #about-view .quote:before {
-  margin-left: -11px;
+  margin-left: -14px;
   content: "“ ";
 }
 
@@ -299,6 +301,10 @@
   background: #f2685f;
 }
 
+.mapboxgl-map {
+  font: inherit;
+}
+
 .mapboxgl-ctrl-group,
 .map-popup .mapboxgl-popup-content {
   border-radius: 0;
@@ -308,14 +314,24 @@
   padding: 15px;
 }
 
+.map-popup h1,
+.map-popup h2 {
+  font-family: 'helvetica';
+  font-weight: bold;  
+}
+
 .map-popup h1 {
-  font-size: 1.15em;
+  font-size: 1.1em;
 }
 
 .map-popup h2 {
-  font-size: 1.15em;
+  font-size: 1.1em;
   padding: 0 0 8px 0;
   color: #979BA0;  
+}
+
+.map-popup .more-link {
+  font-weight: bold;
 }
 
 .map-popup img {
@@ -324,8 +340,8 @@
 
 .map-popup p {
   padding-top: 8px;
-  font-size: 1.15em;
-  line-height: 1.15em;
+  font-size: 1.1em;
+  line-height: 1.1em;
 }
 
 .map-popup .popup-title {
@@ -454,6 +470,7 @@
 #map-view #map-key h1 {
   display: inline-block;
   vertical-align: top;  
+  font-family: 'helvetica';
   font-size: 1.1em;
 }
 
@@ -551,14 +568,16 @@
   }
 
   #about-view .footnote {
-    font-size: 1.4em;
-    line-height: 1.2em;
     color: #979BA0;
   }
 
-  #about-view .quote {      
+  #about-view .quote {
     margin-left: 40%; 
     font-size: 2em;
+  }
+
+  #about-view .quote:before {
+    margin-left: -21px;
   }
 
   #about-view .quote-credit {
@@ -619,8 +638,9 @@
 
   #downloads-view h1 {
     padding-bottom: 0;
+    font-size: 2.2em;
   }
-  
+    
   #downloads-view ul {
     margin-left: 60%;
   }
