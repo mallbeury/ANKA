@@ -26,5 +26,7 @@ class FeedPage_Controller extends Page_Controller {
 
   public function init() {
     parent::init();
+
+    $this->HomePage = DataObject::get_one("HomePage");
   }
 }

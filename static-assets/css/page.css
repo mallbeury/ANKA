@@ -128,8 +128,10 @@
   content: "”";
 }
 
-#about-view .quote-credit {
+#about-view .quote-credit {  
   margin: 0 0 0 15%;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 800; /* ExtraBold */
   font-size: 1.2em;
   line-height: 1.2em;
   color: #F26A61;

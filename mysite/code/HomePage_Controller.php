@@ -15,7 +15,10 @@ class HomePage extends Page {
     'Project1ImageCredit' => 'Text',
     'Project2ImageCredit' => 'Text',
     'Project1Content' => 'HTMLText',
-    'Project2Content' => 'HTMLText'
+    'Project2Content' => 'HTMLText',
+    'SocialIGLink' => 'Text',
+    'SocialFBLink' => 'Text',
+    'SocialVimeoLink' => 'Text'
   );
 
   private static $has_many = array(
@@ -105,6 +108,11 @@ class HomePage extends Page {
 
     $fields->addFieldToTab('Root.Video', $uploadFieldVideo);
 
+    // social
+    $fields->addFieldToTab('Root.Social', new TextField('SocialIGLink', 'Instagram URL'));
+    $fields->addFieldToTab('Root.Social', new TextField('SocialFBLink', 'Facebook URL'));
+    $fields->addFieldToTab('Root.Social', new TextField('SocialVimeoLink', 'Vimeo URL'));
+
     return $fields;
   }
 
@@ -115,6 +123,8 @@ class HomePage_Controller extends Page_Controller {
 
   public function init() {
     parent::init();
+
+    $this->HomePage = DataObject::get_one("HomePage");
 
     $bShowSplash = true;
 

@@ -27,6 +27,12 @@
   height: 84px;
 }
 
+.profiles-container .name h1,
+.profiles-container .name h2,
+.profiles-container .name h3 {
+  font-weight: bold;
+}
+
 .profiles-container .name .highlight {
   text-decoration-color: #000;
   -webkit-text-decoration-color: #000;
@@ -44,11 +50,39 @@
 }
 
 .profile-info {
+  border-top: 2px solid #000;
   margin-top: 32px;
   margin-bottom: 56px;
   position: relative;
   padding: 0;
   color: #000;
+}
+
+.profile-info .arrows {
+  margin: 0 -10px;
+  padding: 0;
+}
+
+.profile-info .arrows .arrow {
+  padding: 0 10px;
+  text-align: center;
+}
+
+.profile-info .arrows .arrow:before {
+  display: none;
+  position: absolute;
+  top: -28px;
+  margin-left: -14px;
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 14px 28px 14px;
+  border-color: transparent transparent #000 transparent;
+}
+
+.profile-info .arrows .arrow.fixed-align:before {
+  display: inline-block;
 }
 
 .profile-info h1, 
@@ -59,6 +93,7 @@
 }
 
 .profile-info .titles {
+  padding-top: 16px;
   padding-bottom: 22px;
 }
 
@@ -143,14 +178,32 @@
     width: 66.6666%;
   }
 
+  .profile-info .arrows .arrow.fixed-align:before {
+    display: none;
+  }
+
+  .profile-info-container.left-align .profile-info .arrows .arrow.left-align:before {
+    display: inline-block;
+  }
+
+  .profile-info-container.middle-align .profile-info .arrows .arrow.middle-align:before {
+    display: inline-block;
+  }
+
+  .profile-info-container.right-align .profile-info .arrows .arrow.right-align:before {
+    display: inline-block;
+  }
+
   .profile-info .titles {
+    padding-top: 92px;
     padding-bottom: 92px;
   }
 
   .profile-info h1, 
   .profile-info h2, 
   .profile-info h3 {
-    font-size: 2.2em;
+    font-size: 2.6em;
+    line-height: 1.2em;
   }
 }
 

@@ -1,5 +1,5 @@
 <?php
-class BoardProfileElement extends DataObject {
+class StaffProfileElement extends DataObject {
   private static $db = array(
     'Name' => 'Text',
     'SortID'=>'Int',
