@@ -22,6 +22,7 @@ class HomePage extends Page {
   );
 
   private static $has_many = array(
+    'SupporterElements' => 'SupporterElement'
   );
 
   private static $has_one = array(
@@ -113,6 +114,21 @@ class HomePage extends Page {
     $fields->addFieldToTab('Root.Social', new TextField('SocialFBLink', 'Facebook URL'));
     $fields->addFieldToTab('Root.Social', new TextField('SocialVimeoLink', 'Vimeo URL'));
 
+    // supported
+    $config = GridFieldConfig_RelationEditor::create();
+    $config->removeComponentsByType('GridFieldPaginator');
+    $config->removeComponentsByType('GridFieldPageCount');
+    $config->addComponent(new GridFieldSortableRows('SortID'));
+
+    $supporterElementField = new GridField(
+      'SupporterElements', // Field name
+      'Supporter Element', // Field title
+      $this->SupporterElements(),
+      $config
+    );
+
+    $fields->addFieldToTab('Root.Supported', $supporterElementField); 
+
     return $fields;
   }
 
@@ -124,7 +140,7 @@ class HomePage_Controller extends Page_Controller {
   public function init() {
     parent::init();
 
-    $this->HomePage = DataObject::get_one("HomePage");
+    $this->HomePage = $this;
 
     $bShowSplash = true;
 
