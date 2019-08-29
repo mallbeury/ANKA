@@ -5,9 +5,9 @@ class PageElement extends DataObject {
     'SortID'=>'Int',
     'Content' => 'HTMLText',
     'QuoteCredit' => 'Text',
-    'Quote' => 'HTMLText',
+    'Quote' => 'Text',
     'FeatureTitle' => 'Text',
-    'Feature' => 'HTMLText',
+    'Feature' => 'Text',
     'HeroImageCredit' => 'Text',
     'ImageSize'=>'Int'
   );

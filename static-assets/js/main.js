@@ -124,7 +124,7 @@ function setupUI() {
     }, 1000);      
   });
 
-  // search
+  // open search panel
   $('.search-btn').click(function(evt){
     $('#acknowledge-view').hide();
     $('#acknowledge-view').removeClass('active');
@@ -133,6 +133,11 @@ function setupUI() {
 
   $('.close-btn', $('#search-view')).click(function(evt){
     $('#search-view').removeClass('active');
+  });
+
+  // perform search
+  $('#SearchForm_SearchForm .submit').click(function(evt){
+    $('#SearchForm_SearchForm').submit();
   });
 
   // inital show

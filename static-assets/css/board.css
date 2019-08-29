@@ -22,14 +22,14 @@
 }
 
 .profiles-container .name {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  height: 84px;
+  padding-top: 8px;
+  height: 76px;
 }
 
 .profiles-container .name h1,
 .profiles-container .name h2,
 .profiles-container .name h3 {
+  font-family: 'helvetica';
   font-weight: bold;
 }
 
@@ -89,7 +89,8 @@
 .profile-info h2, 
 .profile-info h3 {
   font-weight: 700; /* Bold */
-  font-size: 1.6em;
+  font-size: 2.6em;
+  line-height: 1.1em;
 }
 
 .profile-info .titles {
@@ -182,6 +183,11 @@
     display: none;
   }
 
+  .profiles-container .name {
+    padding-top: 12px;
+    height: 86px;
+  }
+
   .profile-info-container.left-align .profile-info .arrows .arrow.left-align:before {
     display: inline-block;
   }
@@ -202,8 +208,12 @@
   .profile-info h1, 
   .profile-info h2, 
   .profile-info h3 {
-    font-size: 2.6em;
-    line-height: 1.2em;
+    font-size: 4.4em;
+  }
+
+  .profile-info td {
+    font-size: 1.4em;
+    line-height: 1.3em;
   }
 }
 

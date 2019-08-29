@@ -239,7 +239,7 @@ form input {
   display: none;
   position: absolute;
   top: 12px;
-  right: 56px;
+  right: 82px;
   width: 400px;
 }
 
@@ -248,11 +248,20 @@ form input {
 }
 
 #search-view .search-form input {
-  padding: 0 0 4px 0;
+  padding: 0 30px 4px 0;
   border-top: none;
   border-left: none;
   border-right: none;
   height: auto;
+}
+
+#search-view .search-form .submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#search-view .search-form .submit:hover {
+  cursor: pointer;
 }
 
 #search-view .search-form input::placeholder {
