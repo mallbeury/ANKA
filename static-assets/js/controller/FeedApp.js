@@ -31,7 +31,7 @@ define([
 
     app.dispatcher.on("SocialFeatureView:feedready", onSocialFeedReady);
 
-    var socialFeedView = new SocialFeedView({ el: '#journal-view' });
+    var socialFeedView = new SocialFeedView({ el: '#journal-view', strFeedURL: FEED_URL });
     socialFeedView.loadFeed();
 
     $('#signup').submit(function(evt){

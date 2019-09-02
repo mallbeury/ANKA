@@ -102,7 +102,7 @@ class BoardPage_Controller extends Page_Controller {
         $ProfileElementsEdited->push($item);
       }
       // we have a remainder so add another break
-      if ($nCol < $nCols-1) {
+      if ($nCol <= $nCols-1) {
         $item->Break = true;
       }
       return $ProfileElementsEdited;

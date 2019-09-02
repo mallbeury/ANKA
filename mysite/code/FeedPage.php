@@ -2,6 +2,7 @@
 class FeedPage extends Page {
 
   private static $db = array(
+    'FeedURL' => 'Text'
   );
 
   private static $has_many = array(
@@ -12,6 +13,8 @@ class FeedPage extends Page {
 
   function getCMSFields() {
     $fields = parent::getCMSFields();
+
+    $fields->addFieldToTab('Root.Main', new TextField('FeedURL', 'Juicer URL'));
 
     // remove fields
     $fields->removeFieldFromTab('Root.Main', 'Content');
