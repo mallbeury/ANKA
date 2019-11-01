@@ -107,7 +107,8 @@ define([
       var elSharedInfo = $(elElement).nextAll('.shared-info').eq(0);
 
       elSharedInfo.removeClass('left-align');
-      elSharedInfo.removeClass('middle-align');
+      elSharedInfo.removeClass('middle1-align');
+      elSharedInfo.removeClass('middle2-align');
       elSharedInfo.removeClass('right-align');
 
       elSharedInfo.addClass(elElement.attr('data-align')+'-align');

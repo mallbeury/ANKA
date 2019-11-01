@@ -192,7 +192,11 @@
     display: inline-block;
   }
 
-  .profile-info-container.middle-align .profile-info .arrows .arrow.middle-align:before {
+  .profile-info-container.middle1-align .profile-info .arrows .arrow.middle1-align:before {
+    display: inline-block;
+  }
+
+  .profile-info-container.middle2-align .profile-info .arrows .arrow.middle2-align:before {
     display: inline-block;
   }
 

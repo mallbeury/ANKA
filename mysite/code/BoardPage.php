@@ -76,7 +76,7 @@ class BoardPage_Controller extends Page_Controller {
 
     function buildProfiles($ProfileElements) {
       $ProfileElementsEdited = new ArrayList();
-      $nCols = 3;
+      $nCols = 4;
       $nCol = 0;
       foreach($ProfileElements as $item) {
         switch ($nCol) {
@@ -84,9 +84,12 @@ class BoardPage_Controller extends Page_Controller {
             $strAlign = 'left';
             break;
           case 1:
-            $strAlign = 'middle';
+            $strAlign = 'middle1';
             break;
           case 2:
+            $strAlign = 'middle2';
+            break;
+          case 3:
             $strAlign = 'right';
             break;
         }
