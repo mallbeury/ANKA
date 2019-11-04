@@ -79,15 +79,15 @@
 }
 
 #journal-view .journal-post {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #979BA0;
 }
 
 #journal-view .journal-post h1 {
   font-family: 'helvetica';
-  padding: 4px 0;
+  padding: 0;
   border: none;
-  font-size: 1em;
+  font-size: 1.2em;
   color: #000;
 }
 

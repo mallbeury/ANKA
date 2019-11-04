@@ -29,8 +29,10 @@
 .profiles-container .name h1,
 .profiles-container .name h2,
 .profiles-container .name h3 {
+  width: 100%;
   font-family: 'helvetica';
   font-weight: bold;
+  font-size: 1.3em;
 }
 
 .profiles-container .name .highlight {

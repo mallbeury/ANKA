@@ -9,6 +9,7 @@ class HomePage extends Page {
     'WhoImageCredit' => 'Text',
     'HowContent' => 'HTMLText',
     'HowImageCredit' => 'Text',
+    'KeepUpText' => 'HTMLText',
     'KeepUpImageCredit' => 'Text',
     'ImpactImageCredit' => 'Text',
     'FeatureImageCredit' => 'Text',
@@ -95,6 +96,7 @@ class HomePage extends Page {
     $uploadField3->setCanUpload(false);
     $fields->addFieldToTab('Root.KeepUp', $uploadField3);
     $fields->addFieldToTab('Root.KeepUp', new TextField('KeepUpImageCredit', 'Credit'));
+    $fields->addFieldToTab('Root.KeepUp', new HtmlEditorField('KeepUpText', 'Text'));
 
     // impact
     $uploadField4 = new UploadField($name = 'ImpactImage', $title = 'Image');

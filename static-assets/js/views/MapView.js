@@ -105,7 +105,7 @@ define([
 
       this.mainMap = new mapboxgl.Map({
         container: 'main-map',
-        style: 'mapbox://styles/rodeo-com-co/cjuafvt0e9q631fqm11pzno6q',
+        style: 'mapbox://styles/rodeo-com-co/cjuafvt0e9q631fqm11pzno6q',      
         center: [131.364486, -16.147204],
         zoom: 5,
         scrollZoom: false,

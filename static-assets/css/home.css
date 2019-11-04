@@ -379,6 +379,10 @@ p.nav {
   line-height: 1.2em;
 }
 
+#help-us-view .btn {
+  margin-bottom: 14px;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .standard-view {
